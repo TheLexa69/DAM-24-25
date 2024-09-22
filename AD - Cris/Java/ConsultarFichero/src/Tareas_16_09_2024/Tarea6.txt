@@ -1,0 +1,9 @@
+6. Prueba el código de leer y guardar objetos de tipo Persona con Mascotas. ¿Qué sucede si modificamos la clase antes de deserializar?
+
+R: Al generar el archivo con las clases sin ningun cambio y leer el metodo toString de la clase enseñará todos los datos correspondientes y correctos. Si después hacemos un cambio, 
+como por ejemplo añadir un atributo la clase Persona en este caso "apellidos", hacemos el getter, actualizamos el constructor y el toString(), y llamamos en el main la lectura del archivo
+generado anteriormente, el/los atributos que falten se pondrán por defecto en "null"  
+
+Persona María null
+Mascota nombre=Rudy numPatas=4 pelo=true
+Mascota nombre=Piolin numPatas=2 pelo=false
