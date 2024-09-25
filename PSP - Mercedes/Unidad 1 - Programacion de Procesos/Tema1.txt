@@ -1,0 +1,28 @@
+**** Cual es el estado anterior al Listo?
+ - Nuevo, Bloqueado o Terminado y ha vuelto a la lista de espera.
+
+**** Estado ejecucion = referencia solo esta en la cola de procesos vivos
+ - 
+
+**** En que consiste la ejecucion concurrente de procesos ?
+ - 
+
+**** Quien ejecuta el metodo getOutputStream() ? 
+ - El proceso padre que puede hacer hijo1.getOutputStream();
+
+**** El proceso padre puede manipular objetos, datos del proceso hijo ?
+ - No, no se puede, sólo tiene acceso a mandarle datos. 
+
+**** Que hará el metodo getInputStream() ? 
+ - Estoy solicitando un flujo de bytes de entrada, conectado a la salida 
+estandar del proceso hijo referenciado.
+	hijo1.getInputStream() -> Conectame por una tuberia de entrada 
+		para mi (padre > hijo).
+ - El padre solicita un input stream que es un flujo de bytes de entrada, 
+mediante una tuberia entre el padre y el hijo. 
+
+**** Qué hace el metodo waitFor() 
+ - hijo1.waitFor() pone al proceso ejecutado en estado bloqueado hasta que 
+el proceso hijo finalice. Bloquea al padre, no al hijo.
+
+**** 
