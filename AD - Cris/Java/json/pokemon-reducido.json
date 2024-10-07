@@ -1,0 +1,2670 @@
+{
+  "pokedex": {
+    "pokemon": [
+      {
+        "name": "BULBASAUR",
+        "type": [
+          "Grass",
+          "Poison"
+        ],
+        "ability": "Overgrow",
+        "exp": 1059860,
+        "stats": {
+          "HP": 45,
+          "ATK": 49,
+          "DEF": 49,
+          "SPD": 45,
+          "SAT": 65,
+          "SDF": 65
+        },
+        "evolutions": {
+          "evolution": [
+            {
+              "name": "Bulbasaur"
+            },
+            {
+              "name": "Ivysaur",
+              "lvl": 16
+            },
+            {
+              "name": "Venusaur",
+              "lvl": 32
+            }
+          ]
+        },
+        "ratio": {
+          "male": 87.5,
+          "female": 12.5
+        },
+        "egg-group": [
+          "Monster",
+          "Grass"
+        ],
+        "species": "Seed Pokemon",
+        "height": 0.7,
+        "weight": 6.9,
+        "description": "For some time after its birth, it grows by gaining nourishment from the seed on its\n      back.",
+        "moves": {
+          "move": [
+            {
+              "name": "Tackle",
+              "lvl": 1
+            },
+            {
+              "name": "Growl",
+              "lvl": 3
+            },
+            {
+              "name": "Leech Seed",
+              "lvl": 7
+            },
+            {
+              "name": "Vine Whip",
+              "lvl": 9
+            },
+            {
+              "name": "Poisonpowder",
+              "lvl": 13
+            },
+            {
+              "name": "Sleep Powder",
+              "lvl": 13
+            },
+            {
+              "name": "Take Down",
+              "lvl": 15
+            },
+            {
+              "name": "Razor Leaf",
+              "lvl": 19
+            },
+            {
+              "name": "Sweet Scent",
+              "lvl": 21
+            },
+            {
+              "name": "Growth",
+              "lvl": 25
+            },
+            {
+              "name": "Double-edge",
+              "lvl": 27
+            },
+            {
+              "name": "Worry Seed",
+              "lvl": 31
+            },
+            {
+              "name": "Synthesis",
+              "lvl": 33
+            },
+            {
+              "name": "Seed Bomb",
+              "lvl": 37
+            },
+            {
+              "machine": "TM",
+              "name": "Toxic",
+              "lvl": 6
+            },
+            {
+              "machine": "TM",
+              "name": "Bullet Seed",
+              "lvl": 9
+            },
+            {
+              "machine": "TM",
+              "name": "Hidden Power",
+              "lvl": 10
+            },
+            {
+              "machine": "TM",
+              "name": "Sunny Day",
+              "lvl": 11
+            },
+            {
+              "machine": "TM",
+              "name": "Protect",
+              "lvl": 17
+            },
+            {
+              "machine": "TM",
+              "name": "Giga Drain",
+              "lvl": 19
+            },
+            {
+              "machine": "TM",
+              "name": "Frustration",
+              "lvl": 21
+            },
+            {
+              "machine": "TM",
+              "name": "Solarbeam",
+              "lvl": 22
+            },
+            {
+              "machine": "TM",
+              "name": "Return",
+              "lvl": 27
+            },
+            {
+              "machine": "TM",
+              "name": "Double Team",
+              "lvl": 32
+            },
+            {
+              "machine": "TM",
+              "name": "Sludge Bomb",
+              "lvl": 36
+            },
+            {
+              "machine": "TM",
+              "name": "Facade",
+              "lvl": 42
+            },
+            {
+              "machine": "TM",
+              "name": "Secret Power",
+              "lvl": 43
+            },
+            {
+              "machine": "TM",
+              "name": "Rest",
+              "lvl": 44
+            },
+            {
+              "machine": "TM",
+              "name": "Attract",
+              "lvl": 45
+            },
+            {
+              "machine": "TM",
+              "name": "Energy Ball",
+              "lvl": 53
+            },
+            {
+              "machine": "TM",
+              "name": "Endure",
+              "lvl": 58
+            },
+            {
+              "machine": "TM",
+              "name": "Flash",
+              "lvl": 70
+            },
+            {
+              "machine": "TM",
+              "name": "Swords Dance",
+              "lvl": 75
+            },
+            {
+              "machine": "TM",
+              "name": "Captivate",
+              "lvl": 78
+            },
+            {
+              "machine": "TM",
+              "name": "Sleep Talk",
+              "lvl": 82
+            },
+            {
+              "machine": "TM",
+              "name": "Natural Gift",
+              "lvl": 83
+            },
+            {
+              "machine": "TM",
+              "name": "Grass Knot",
+              "lvl": 86
+            },
+            {
+              "machine": "TM",
+              "name": "Swagger",
+              "lvl": 87
+            },
+            {
+              "machine": "TM",
+              "name": "Substitute",
+              "lvl": 90
+            },
+            {
+              "machine": "HM",
+              "name": "Cut",
+              "lvl": 1
+            },
+            {
+              "machine": "HM",
+              "name": "Strength",
+              "lvl": 4
+            },
+            {
+              "machine": "HM",
+              "name": "Rock Smash",
+              "lvl": 6
+            },
+            {
+              "name": "Amnesia"
+            },
+            {
+              "name": "Charm"
+            },
+            {
+              "name": "Curse"
+            },
+            {
+              "name": "Grasswhistle"
+            },
+            {
+              "name": "Ingrain"
+            },
+            {
+              "name": "Leaf Storm"
+            },
+            {
+              "name": "Light Screen"
+            },
+            {
+              "name": "Magical Leaf"
+            },
+            {
+              "name": "Nature Power"
+            },
+            {
+              "name": "Petal Dance"
+            },
+            {
+              "name": "Safeguard"
+            },
+            {
+              "name": "Skull Bash"
+            }
+          ]
+        }
+      },
+      {
+        "name": "IVYSAUR",
+        "type": [
+          "Grass",
+          "Poison"
+        ],
+        "ability": "Overgrow",
+        "exp": 1059860,
+        "stats": {
+          "HP": 60,
+          "ATK": 62,
+          "DEF": 63,
+          "SPD": 60,
+          "SAT": 80,
+          "SDF": 80
+        },
+        "evolutions": {
+          "evolution": [
+            {
+              "name": "Bulbasaur"
+            },
+            {
+              "name": "Ivysaur",
+              "lvl": 16
+            },
+            {
+              "name": "Venusaur",
+              "lvl": 32
+            }
+          ]
+        },
+        "ratio": {
+          "male": 87.5,
+          "female": 12.5
+        },
+        "egg-group": [
+          "Monster",
+          "Grass"
+        ],
+        "species": "Seed Pokemon",
+        "height": 1,
+        "weight": 13,
+        "description": "When the bud on its back starts swelling, a sweet aroma wafts to indicate the\n      flower's coming bloom.",
+        "moves": {
+          "move": [
+            {
+              "name": "Tackle",
+              "lvl": 1
+            },
+            {
+              "name": "Growl",
+              "lvl": 1
+            },
+            {
+              "name": "Leech Seed",
+              "lvl": 1
+            },
+            {
+              "name": "Growl",
+              "lvl": 3
+            },
+            {
+              "name": "Leech Seed",
+              "lvl": 7
+            },
+            {
+              "name": "Vine Whip",
+              "lvl": 9
+            },
+            {
+              "name": "Poisonpowder",
+              "lvl": 13
+            },
+            {
+              "name": "Sleep Powder",
+              "lvl": 13
+            },
+            {
+              "name": "Take Down",
+              "lvl": 15
+            },
+            {
+              "name": "Razor Leaf",
+              "lvl": 20
+            },
+            {
+              "name": "Sweet Scent",
+              "lvl": 23
+            },
+            {
+              "name": "Growth",
+              "lvl": 28
+            },
+            {
+              "name": "Double-edge",
+              "lvl": 31
+            },
+            {
+              "name": "Worry Seed",
+              "lvl": 36
+            },
+            {
+              "name": "Synthesis",
+              "lvl": 39
+            },
+            {
+              "name": "Solarbeam",
+              "lvl": 44
+            },
+            {
+              "machine": "TM",
+              "name": "Toxic",
+              "lvl": 6
+            },
+            {
+              "machine": "TM",
+              "name": "Bullet Seed",
+              "lvl": 9
+            },
+            {
+              "machine": "TM",
+              "name": "Hidden Power",
+              "lvl": 10
+            },
+            {
+              "machine": "TM",
+              "name": "Sunny Day",
+              "lvl": 11
+            },
+            {
+              "machine": "TM",
+              "name": "Protect",
+              "lvl": 17
+            },
+            {
+              "machine": "TM",
+              "name": "Giga Drain",
+              "lvl": 19
+            },
+            {
+              "machine": "TM",
+              "name": "Frustration",
+              "lvl": 21
+            },
+            {
+              "machine": "TM",
+              "name": "Solarbeam",
+              "lvl": 22
+            },
+            {
+              "machine": "TM",
+              "name": "Return",
+              "lvl": 27
+            },
+            {
+              "machine": "TM",
+              "name": "Double Team",
+              "lvl": 32
+            },
+            {
+              "machine": "TM",
+              "name": "Sludge Bomb",
+              "lvl": 36
+            },
+            {
+              "machine": "TM",
+              "name": "Facade",
+              "lvl": 42
+            },
+            {
+              "machine": "TM",
+              "name": "Secret Power",
+              "lvl": 43
+            },
+            {
+              "machine": "TM",
+              "name": "Rest",
+              "lvl": 44
+            },
+            {
+              "machine": "TM",
+              "name": "Attract",
+              "lvl": 45
+            },
+            {
+              "machine": "TM",
+              "name": "Energy Ball",
+              "lvl": 53
+            },
+            {
+              "machine": "TM",
+              "name": "Endure",
+              "lvl": 58
+            },
+            {
+              "machine": "TM",
+              "name": "Flash",
+              "lvl": 70
+            },
+            {
+              "machine": "TM",
+              "name": "Swords Dance",
+              "lvl": 75
+            },
+            {
+              "machine": "TM",
+              "name": "Captivate",
+              "lvl": 78
+            },
+            {
+              "machine": "TM",
+              "name": "Sleep Talk",
+              "lvl": 82
+            },
+            {
+              "machine": "TM",
+              "name": "Natural Gift",
+              "lvl": 83
+            },
+            {
+              "machine": "TM",
+              "name": "Grass Knot",
+              "lvl": 86
+            },
+            {
+              "machine": "TM",
+              "name": "Swagger",
+              "lvl": 87
+            },
+            {
+              "machine": "TM",
+              "name": "Substitute",
+              "lvl": 90
+            },
+            {
+              "machine": "HM",
+              "name": "Cut",
+              "lvl": 1
+            },
+            {
+              "machine": "HM",
+              "name": "Strength",
+              "lvl": 4
+            },
+            {
+              "machine": "HM",
+              "name": "Rock Smash",
+              "lvl": 6
+            }
+          ]
+        }
+      },
+      {
+        "name": "VENUSAUR",
+        "type": [
+          "Grass",
+          "Poison"
+        ],
+        "ability": "Overgrow",
+        "exp": 1059860,
+        "stats": {
+          "HP": 80,
+          "ATK": 82,
+          "DEF": 83,
+          "SPD": 80,
+          "SAT": 100,
+          "SDF": 100
+        },
+        "evolutions": {
+          "evolution": [
+            {
+              "name": "Bulbasaur"
+            },
+            {
+              "name": "Ivysaur",
+              "lvl": 16
+            },
+            {
+              "name": "Venusaur",
+              "lvl": 32
+            }
+          ]
+        },
+        "ratio": {
+          "male": 87.5,
+          "female": 12.5
+        },
+        "egg-group": [
+          "Monster",
+          "Grass"
+        ],
+        "species": "Seed Pokemon",
+        "height": 2,
+        "weight": 100,
+        "description": "After a rainy day, the flower on its back smells stronger. The scent attracts other\n      Pokemon.",
+        "moves": {
+          "move": [
+            {
+              "name": "Tackle",
+              "lvl": 1
+            },
+            {
+              "name": "Growl",
+              "lvl": 1
+            },
+            {
+              "name": "Leech Seed",
+              "lvl": 1
+            },
+            {
+              "name": "Vine Whip",
+              "lvl": 1
+            },
+            {
+              "name": "Growl",
+              "lvl": 3
+            },
+            {
+              "name": "Leech Seed",
+              "lvl": 7
+            },
+            {
+              "name": "Vine Whip",
+              "lvl": 9
+            },
+            {
+              "name": "Poisonpowder",
+              "lvl": 13
+            },
+            {
+              "name": "Sleep Powder",
+              "lvl": 13
+            },
+            {
+              "name": "Take Down",
+              "lvl": 15
+            },
+            {
+              "name": "Razor Leaf",
+              "lvl": 20
+            },
+            {
+              "name": "Sweet Scent",
+              "lvl": 23
+            },
+            {
+              "name": "Growth",
+              "lvl": 28
+            },
+            {
+              "name": "Double-edge",
+              "lvl": 31
+            },
+            {
+              "name": "Petal Dance",
+              "lvl": 32
+            },
+            {
+              "name": "Worry Seed",
+              "lvl": 39
+            },
+            {
+              "name": "Synthesis",
+              "lvl": 45
+            },
+            {
+              "name": "Solarbeam",
+              "lvl": 53
+            },
+            {
+              "machine": "TM",
+              "name": "Roar",
+              "lvl": 5
+            },
+            {
+              "machine": "TM",
+              "name": "Toxic",
+              "lvl": 6
+            },
+            {
+              "machine": "TM",
+              "name": "Bullet Seed",
+              "lvl": 9
+            },
+            {
+              "machine": "TM",
+              "name": "Hidden Power",
+              "lvl": 10
+            },
+            {
+              "machine": "TM",
+              "name": "Sunny Day",
+              "lvl": 11
+            },
+            {
+              "machine": "TM",
+              "name": "Hyper Beam",
+              "lvl": 15
+            },
+            {
+              "machine": "TM",
+              "name": "Protect",
+              "lvl": 17
+            },
+            {
+              "machine": "TM",
+              "name": "Giga Drain",
+              "lvl": 19
+            },
+            {
+              "machine": "TM",
+              "name": "Frustration",
+              "lvl": 21
+            },
+            {
+              "machine": "TM",
+              "name": "Solarbeam",
+              "lvl": 22
+            },
+            {
+              "machine": "TM",
+              "name": "Earthquake",
+              "lvl": 26
+            },
+            {
+              "machine": "TM",
+              "name": "Return",
+              "lvl": 27
+            },
+            {
+              "machine": "TM",
+              "name": "Double Team",
+              "lvl": 32
+            },
+            {
+              "machine": "TM",
+              "name": "Sludge Bomb",
+              "lvl": 36
+            },
+            {
+              "machine": "TM",
+              "name": "Facade",
+              "lvl": 42
+            },
+            {
+              "machine": "TM",
+              "name": "Secret Power",
+              "lvl": 43
+            },
+            {
+              "machine": "TM",
+              "name": "Rest",
+              "lvl": 44
+            },
+            {
+              "machine": "TM",
+              "name": "Attract",
+              "lvl": 45
+            },
+            {
+              "machine": "TM",
+              "name": "Energy Ball",
+              "lvl": 53
+            },
+            {
+              "machine": "TM",
+              "name": "Endure",
+              "lvl": 58
+            },
+            {
+              "machine": "TM",
+              "name": "Giga Impact",
+              "lvl": 68
+            },
+            {
+              "machine": "TM",
+              "name": "Flash",
+              "lvl": 70
+            },
+            {
+              "machine": "TM",
+              "name": "Swords Dance",
+              "lvl": 75
+            },
+            {
+              "machine": "TM",
+              "name": "Captivate",
+              "lvl": 78
+            },
+            {
+              "machine": "TM",
+              "name": "Sleep Talk",
+              "lvl": 82
+            },
+            {
+              "machine": "TM",
+              "name": "Natural Gift",
+              "lvl": 83
+            },
+            {
+              "machine": "TM",
+              "name": "Grass Knot",
+              "lvl": 86
+            },
+            {
+              "machine": "TM",
+              "name": "Swagger",
+              "lvl": 87
+            },
+            {
+              "machine": "TM",
+              "name": "Substitute",
+              "lvl": 90
+            },
+            {
+              "machine": "HM",
+              "name": "Cut",
+              "lvl": 1
+            },
+            {
+              "machine": "HM",
+              "name": "Strength",
+              "lvl": 4
+            },
+            {
+              "machine": "HM",
+              "name": "Rock Smash",
+              "lvl": 6
+            },
+            {
+              "machine": "HM",
+              "name": "Rock Climb",
+              "lvl": 8
+            }
+          ]
+        }
+      },
+      {
+        "name": "CHARMANDER",
+        "type": "Fire",
+        "ability": "Blaze",
+        "exp": 1059860,
+        "stats": {
+          "HP": 39,
+          "ATK": 52,
+          "DEF": 43,
+          "SPD": 65,
+          "SAT": 60,
+          "SDF": 50
+        },
+        "evolutions": {
+          "evolution": [
+            {
+              "name": "Charmander"
+            },
+            {
+              "name": "Charmeleon",
+              "lvl": 16
+            },
+            {
+              "name": "Charizard",
+              "lvl": 36
+            }
+          ]
+        },
+        "ratio": {
+          "male": 87.5,
+          "female": 12.5
+        },
+        "egg-group": [
+          "Monster",
+          "Dragon"
+        ],
+        "species": "Lizard Pokemon",
+        "height": 0.6,
+        "weight": 8.5,
+        "description": "The fire on the tip of its tail is a measure of its life. If healthy, its tail\n      burns intensely.",
+        "moves": {
+          "move": [
+            {
+              "name": "Scratch",
+              "lvl": 1
+            },
+            {
+              "name": "Growl",
+              "lvl": 1
+            },
+            {
+              "name": "Ember",
+              "lvl": 7
+            },
+            {
+              "name": "Smokescreen",
+              "lvl": 10
+            },
+            {
+              "name": "Dragon Rage",
+              "lvl": 16
+            },
+            {
+              "name": "Scary Face",
+              "lvl": 19
+            },
+            {
+              "name": "Fire Fang",
+              "lvl": 25
+            },
+            {
+              "name": "Slash",
+              "lvl": 28
+            },
+            {
+              "name": "Flamethrower",
+              "lvl": 34
+            },
+            {
+              "name": "Fire Spin",
+              "lvl": 37
+            },
+            {
+              "machine": "TM",
+              "name": "Focus Punch",
+              "lvl": 1
+            },
+            {
+              "machine": "TM",
+              "name": "Dragon Claw",
+              "lvl": 2
+            },
+            {
+              "machine": "TM",
+              "name": "Toxic",
+              "lvl": 6
+            },
+            {
+              "machine": "TM",
+              "name": "Hidden Power",
+              "lvl": 10
+            },
+            {
+              "machine": "TM",
+              "name": "Sunny Day",
+              "lvl": 11
+            },
+            {
+              "machine": "TM",
+              "name": "Protect",
+              "lvl": 17
+            },
+            {
+              "machine": "TM",
+              "name": "Frustration",
+              "lvl": 21
+            },
+            {
+              "machine": "TM",
+              "name": "Iron Tail",
+              "lvl": 23
+            },
+            {
+              "machine": "TM",
+              "name": "Return",
+              "lvl": 27
+            },
+            {
+              "machine": "TM",
+              "name": "Dig",
+              "lvl": 28
+            },
+            {
+              "machine": "TM",
+              "name": "Brick Break",
+              "lvl": 31
+            },
+            {
+              "machine": "TM",
+              "name": "Double Team",
+              "lvl": 32
+            },
+            {
+              "machine": "TM",
+              "name": "Flamethrower",
+              "lvl": 35
+            },
+            {
+              "machine": "TM",
+              "name": "Fire Blast",
+              "lvl": 38
+            },
+            {
+              "machine": "TM",
+              "name": "Rock Tomb",
+              "lvl": 39
+            },
+            {
+              "machine": "TM",
+              "name": "Aerial Ace",
+              "lvl": 40
+            },
+            {
+              "machine": "TM",
+              "name": "Facade",
+              "lvl": 42
+            },
+            {
+              "machine": "TM",
+              "name": "Secret Power",
+              "lvl": 43
+            },
+            {
+              "machine": "TM",
+              "name": "Rest",
+              "lvl": 44
+            },
+            {
+              "machine": "TM",
+              "name": "Attract",
+              "lvl": 45
+            },
+            {
+              "machine": "TM",
+              "name": "Overheat",
+              "lvl": 50
+            },
+            {
+              "machine": "TM",
+              "name": "Fling",
+              "lvl": 56
+            },
+            {
+              "machine": "TM",
+              "name": "Endure",
+              "lvl": 58
+            },
+            {
+              "machine": "TM",
+              "name": "Will-o-wisp",
+              "lvl": 61
+            },
+            {
+              "machine": "TM",
+              "name": "Shadow Claw",
+              "lvl": 65
+            },
+            {
+              "machine": "TM",
+              "name": "Swords Dance",
+              "lvl": 75
+            },
+            {
+              "machine": "TM",
+              "name": "Captivate",
+              "lvl": 78
+            },
+            {
+              "machine": "TM",
+              "name": "Rock Slide",
+              "lvl": 80
+            },
+            {
+              "machine": "TM",
+              "name": "Sleep Talk",
+              "lvl": 82
+            },
+            {
+              "machine": "TM",
+              "name": "Natural Gift",
+              "lvl": 83
+            },
+            {
+              "machine": "TM",
+              "name": "Swagger",
+              "lvl": 87
+            },
+            {
+              "machine": "TM",
+              "name": "Substitute",
+              "lvl": 90
+            },
+            {
+              "machine": "HM",
+              "name": "Cut",
+              "lvl": 1
+            },
+            {
+              "machine": "HM",
+              "name": "Strength",
+              "lvl": 4
+            },
+            {
+              "machine": "HM",
+              "name": "Rock Smash",
+              "lvl": 6
+            },
+            {
+              "name": "Ancientpower"
+            },
+            {
+              "name": "Beat Up"
+            },
+            {
+              "name": "Belly Drum"
+            },
+            {
+              "name": "Bite"
+            },
+            {
+              "name": "Crunch"
+            },
+            {
+              "name": "Dragon Dance"
+            },
+            {
+              "name": "Dragon Rush"
+            },
+            {
+              "name": "Flare Blitz"
+            },
+            {
+              "name": "Metal Claw"
+            },
+            {
+              "name": "Outrage"
+            },
+            {
+              "name": "Rock Slide"
+            },
+            {
+              "name": "Swords Dance"
+            }
+          ]
+        }
+      },
+      {
+        "name": "CHARMELEON",
+        "type": "Fire",
+        "ability": "Blaze",
+        "exp": 1059860,
+        "stats": {
+          "HP": 58,
+          "ATK": 64,
+          "DEF": 58,
+          "SPD": 80,
+          "SAT": 80,
+          "SDF": 65
+        },
+        "evolutions": {
+          "evolution": [
+            {
+              "name": "Charmander"
+            },
+            {
+              "name": "Charmeleon",
+              "lvl": 16
+            },
+            {
+              "name": "Charizard",
+              "lvl": 36
+            }
+          ]
+        },
+        "ratio": {
+          "male": 87.5,
+          "female": 12.5
+        },
+        "egg-group": [
+          "Monster",
+          "Dragon"
+        ],
+        "species": "Flame Pokemon",
+        "height": 1.1,
+        "weight": 19,
+        "description": "In the rocky mountains where CHARMELEON live, their fiery tails shine at night like\n      stars.",
+        "moves": {
+          "move": [
+            {
+              "name": "Scratch",
+              "lvl": 1
+            },
+            {
+              "name": "Growl",
+              "lvl": 1
+            },
+            {
+              "name": "Ember",
+              "lvl": 1
+            },
+            {
+              "name": "Ember",
+              "lvl": 7
+            },
+            {
+              "name": "Smokescreen",
+              "lvl": 10
+            },
+            {
+              "name": "Dragon Rage",
+              "lvl": 17
+            },
+            {
+              "name": "Scary Face",
+              "lvl": 21
+            },
+            {
+              "name": "Fire Fang",
+              "lvl": 28
+            },
+            {
+              "name": "Slash",
+              "lvl": 32
+            },
+            {
+              "name": "Flamethrower",
+              "lvl": 39
+            },
+            {
+              "name": "Fire Spin",
+              "lvl": 43
+            },
+            {
+              "machine": "TM",
+              "name": "Focus Punch",
+              "lvl": 1
+            },
+            {
+              "machine": "TM",
+              "name": "Dragon Claw",
+              "lvl": 2
+            },
+            {
+              "machine": "TM",
+              "name": "Toxic",
+              "lvl": 6
+            },
+            {
+              "machine": "TM",
+              "name": "Hidden Power",
+              "lvl": 10
+            },
+            {
+              "machine": "TM",
+              "name": "Sunny Day",
+              "lvl": 11
+            },
+            {
+              "machine": "TM",
+              "name": "Protect",
+              "lvl": 17
+            },
+            {
+              "machine": "TM",
+              "name": "Frustration",
+              "lvl": 21
+            },
+            {
+              "machine": "TM",
+              "name": "Iron Tail",
+              "lvl": 23
+            },
+            {
+              "machine": "TM",
+              "name": "Return",
+              "lvl": 27
+            },
+            {
+              "machine": "TM",
+              "name": "Dig",
+              "lvl": 28
+            },
+            {
+              "machine": "TM",
+              "name": "Brick Break",
+              "lvl": 31
+            },
+            {
+              "machine": "TM",
+              "name": "Double Team",
+              "lvl": 32
+            },
+            {
+              "machine": "TM",
+              "name": "Flamethrower",
+              "lvl": 35
+            },
+            {
+              "machine": "TM",
+              "name": "Fire Blast",
+              "lvl": 38
+            },
+            {
+              "machine": "TM",
+              "name": "Rock Tomb",
+              "lvl": 39
+            },
+            {
+              "machine": "TM",
+              "name": "Aerial Ace",
+              "lvl": 40
+            },
+            {
+              "machine": "TM",
+              "name": "Facade",
+              "lvl": 42
+            },
+            {
+              "machine": "TM",
+              "name": "Secret Power",
+              "lvl": 43
+            },
+            {
+              "machine": "TM",
+              "name": "Rest",
+              "lvl": 44
+            },
+            {
+              "machine": "TM",
+              "name": "Attract",
+              "lvl": 45
+            },
+            {
+              "machine": "TM",
+              "name": "Overheat",
+              "lvl": 50
+            },
+            {
+              "machine": "TM",
+              "name": "Fling",
+              "lvl": 56
+            },
+            {
+              "machine": "TM",
+              "name": "Endure",
+              "lvl": 58
+            },
+            {
+              "machine": "TM",
+              "name": "Will-o-wisp",
+              "lvl": 61
+            },
+            {
+              "machine": "TM",
+              "name": "Shadow Claw",
+              "lvl": 65
+            },
+            {
+              "machine": "TM",
+              "name": "Swords Dance",
+              "lvl": 75
+            },
+            {
+              "machine": "TM",
+              "name": "Captivate",
+              "lvl": 78
+            },
+            {
+              "machine": "TM",
+              "name": "Rock Slide",
+              "lvl": 80
+            },
+            {
+              "machine": "TM",
+              "name": "Sleep Talk",
+              "lvl": 82
+            },
+            {
+              "machine": "TM",
+              "name": "Natural Gift",
+              "lvl": 83
+            },
+            {
+              "machine": "TM",
+              "name": "Swagger",
+              "lvl": 87
+            },
+            {
+              "machine": "TM",
+              "name": "Substitute",
+              "lvl": 90
+            },
+            {
+              "machine": "HM",
+              "name": "Cut",
+              "lvl": 1
+            },
+            {
+              "machine": "HM",
+              "name": "Strength",
+              "lvl": 4
+            },
+            {
+              "machine": "HM",
+              "name": "Rock Smash",
+              "lvl": 6
+            }
+          ]
+        }
+      },
+      {
+        "name": "CHARIZARD",
+        "type": [
+          "Fire",
+          "Flying"
+        ],
+        "ability": "Blaze",
+        "exp": 1059860,
+        "stats": {
+          "HP": 78,
+          "ATK": 84,
+          "DEF": 78,
+          "SPD": 100,
+          "SAT": 109,
+          "SDF": 85
+        },
+        "evolutions": {
+          "evolution": [
+            {
+              "name": "Charmander"
+            },
+            {
+              "name": "Charmeleon",
+              "lvl": 16
+            },
+            {
+              "name": "Charizard",
+              "lvl": 36
+            }
+          ]
+        },
+        "ratio": {
+          "male": 87.5,
+          "female": 12.5
+        },
+        "egg-group": [
+          "Monster",
+          "Dragon"
+        ],
+        "species": "Flame Pokemon",
+        "height": 1.7,
+        "weight": 90.5,
+        "description": "It is said that CHARIZARD's fire burns hotter if it has experienced harsh battles.",
+        "moves": {
+          "move": [
+            {
+              "name": "Dragon Claw",
+              "lvl": 1
+            },
+            {
+              "name": "Shadow Claw",
+              "lvl": 1
+            },
+            {
+              "name": "Air Slash",
+              "lvl": 1
+            },
+            {
+              "name": "Scratch",
+              "lvl": 1
+            },
+            {
+              "name": "Growl",
+              "lvl": 1
+            },
+            {
+              "name": "Ember",
+              "lvl": 1
+            },
+            {
+              "name": "Smokescreen",
+              "lvl": 1
+            },
+            {
+              "name": "Ember",
+              "lvl": 7
+            },
+            {
+              "name": "Smokescreen",
+              "lvl": 10
+            },
+            {
+              "name": "Dragon Rage",
+              "lvl": 17
+            },
+            {
+              "name": "Scary Face",
+              "lvl": 21
+            },
+            {
+              "name": "Fire Fang",
+              "lvl": 28
+            },
+            {
+              "name": "Slash",
+              "lvl": 32
+            },
+            {
+              "name": "Wing Attack",
+              "lvl": 36
+            },
+            {
+              "name": "Flamethrower",
+              "lvl": 42
+            },
+            {
+              "name": "Fire Spin",
+              "lvl": 49
+            },
+            {
+              "name": "Heat Wave",
+              "lvl": 59
+            },
+            {
+              "name": "Flare Blitz",
+              "lvl": 66
+            },
+            {
+              "machine": "TM",
+              "name": "Focus Punch",
+              "lvl": 1
+            },
+            {
+              "machine": "TM",
+              "name": "Dragon Claw",
+              "lvl": 2
+            },
+            {
+              "machine": "TM",
+              "name": "Roar",
+              "lvl": 5
+            },
+            {
+              "machine": "TM",
+              "name": "Toxic",
+              "lvl": 6
+            },
+            {
+              "machine": "TM",
+              "name": "Hidden Power",
+              "lvl": 10
+            },
+            {
+              "machine": "TM",
+              "name": "Sunny Day",
+              "lvl": 11
+            },
+            {
+              "machine": "TM",
+              "name": "Hyper Beam",
+              "lvl": 15
+            },
+            {
+              "machine": "TM",
+              "name": "Protect",
+              "lvl": 17
+            },
+            {
+              "machine": "TM",
+              "name": "Frustration",
+              "lvl": 21
+            },
+            {
+              "machine": "TM",
+              "name": "Solarbeam",
+              "lvl": 22
+            },
+            {
+              "machine": "TM",
+              "name": "Iron Tail",
+              "lvl": 23
+            },
+            {
+              "machine": "TM",
+              "name": "Earthquake",
+              "lvl": 26
+            },
+            {
+              "machine": "TM",
+              "name": "Return",
+              "lvl": 27
+            },
+            {
+              "machine": "TM",
+              "name": "Dig",
+              "lvl": 28
+            },
+            {
+              "machine": "TM",
+              "name": "Brick Break",
+              "lvl": 31
+            },
+            {
+              "machine": "TM",
+              "name": "Double Team",
+              "lvl": 32
+            },
+            {
+              "machine": "TM",
+              "name": "Flamethrower",
+              "lvl": 35
+            },
+            {
+              "machine": "TM",
+              "name": "Fire Blast",
+              "lvl": 38
+            },
+            {
+              "machine": "TM",
+              "name": "Rock Tomb",
+              "lvl": 39
+            },
+            {
+              "machine": "TM",
+              "name": "Aerial Ace",
+              "lvl": 40
+            },
+            {
+              "machine": "TM",
+              "name": "Facade",
+              "lvl": 42
+            },
+            {
+              "machine": "TM",
+              "name": "Secret Power",
+              "lvl": 43
+            },
+            {
+              "machine": "TM",
+              "name": "Rest",
+              "lvl": 44
+            },
+            {
+              "machine": "TM",
+              "name": "Attract",
+              "lvl": 45
+            },
+            {
+              "machine": "TM",
+              "name": "Steel Wing",
+              "lvl": 47
+            },
+            {
+              "machine": "TM",
+              "name": "Overheat",
+              "lvl": 50
+            },
+            {
+              "machine": "TM",
+              "name": "Roost",
+              "lvl": 51
+            },
+            {
+              "machine": "TM",
+              "name": "Focus Blast",
+              "lvl": 52
+            },
+            {
+              "machine": "TM",
+              "name": "Fling",
+              "lvl": 56
+            },
+            {
+              "machine": "TM",
+              "name": "Endure",
+              "lvl": 58
+            },
+            {
+              "machine": "TM",
+              "name": "Dragon Pulse",
+              "lvl": 59
+            },
+            {
+              "machine": "TM",
+              "name": "Will-o-wisp",
+              "lvl": 61
+            },
+            {
+              "machine": "TM",
+              "name": "Shadow Claw",
+              "lvl": 65
+            },
+            {
+              "machine": "TM",
+              "name": "Giga Impact",
+              "lvl": 68
+            },
+            {
+              "machine": "TM",
+              "name": "Swords Dance",
+              "lvl": 75
+            },
+            {
+              "machine": "TM",
+              "name": "Captivate",
+              "lvl": 78
+            },
+            {
+              "machine": "TM",
+              "name": "Rock Slide",
+              "lvl": 80
+            },
+            {
+              "machine": "TM",
+              "name": "Sleep Talk",
+              "lvl": 82
+            },
+            {
+              "machine": "TM",
+              "name": "Natural Gift",
+              "lvl": 83
+            },
+            {
+              "machine": "TM",
+              "name": "Swagger",
+              "lvl": 87
+            },
+            {
+              "machine": "TM",
+              "name": "Substitute",
+              "lvl": 90
+            },
+            {
+              "machine": "HM",
+              "name": "Cut",
+              "lvl": 1
+            },
+            {
+              "machine": "HM",
+              "name": "Fly",
+              "lvl": 2
+            },
+            {
+              "machine": "HM",
+              "name": "Strength",
+              "lvl": 4
+            },
+            {
+              "machine": "HM",
+              "name": "Defog",
+              "lvl": 5
+            },
+            {
+              "machine": "HM",
+              "name": "Rock Smash",
+              "lvl": 6
+            }
+          ]
+        }
+      },
+      {
+        "name": "SQUIRTLE",
+        "type": "Water",
+        "ability": "Torrent",
+        "exp": 1059860,
+        "stats": {
+          "HP": 44,
+          "ATK": 48,
+          "DEF": 65,
+          "SPD": 43,
+          "SAT": 50,
+          "SDF": 64
+        },
+        "evolutions": {
+          "evolution": [
+            {
+              "name": "Squirtle"
+            },
+            {
+              "name": "Wartortle",
+              "lvl": 16
+            },
+            {
+              "name": "Blastoise",
+              "lvl": 36
+            }
+          ]
+        },
+        "ratio": {
+          "male": 87.5,
+          "female": 12.5
+        },
+        "egg-group": [
+          "Monster",
+          "Water"
+        ],
+        "species": "Tiny Turtle Pokemon",
+        "height": 0.5,
+        "weight": 9,
+        "description": "It shelters itself in its shell, then strikes back with spouts of water at every\n      opportunity.",
+        "moves": {
+          "move": [
+            {
+              "name": "Tackle",
+              "lvl": 1
+            },
+            {
+              "name": "Tail Whip",
+              "lvl": 4
+            },
+            {
+              "name": "Bubble",
+              "lvl": 7
+            },
+            {
+              "name": "Withdraw",
+              "lvl": 10
+            },
+            {
+              "name": "Water Gun",
+              "lvl": 13
+            },
+            {
+              "name": "Bite",
+              "lvl": 16
+            },
+            {
+              "name": "Rapid Spin",
+              "lvl": 19
+            },
+            {
+              "name": "Protect",
+              "lvl": 22
+            },
+            {
+              "name": "Water Pulse",
+              "lvl": 25
+            },
+            {
+              "name": "Aqua Tail",
+              "lvl": 28
+            },
+            {
+              "name": "Skull Bash",
+              "lvl": 31
+            },
+            {
+              "name": "Rain Dance",
+              "lvl": 34
+            },
+            {
+              "name": "Hydro Pump",
+              "lvl": 37
+            },
+            {
+              "machine": "TM",
+              "name": "Focus Punch",
+              "lvl": 1
+            },
+            {
+              "machine": "TM",
+              "name": "Water Pulse",
+              "lvl": 3
+            },
+            {
+              "machine": "TM",
+              "name": "Toxic",
+              "lvl": 6
+            },
+            {
+              "machine": "TM",
+              "name": "Hail",
+              "lvl": 7
+            },
+            {
+              "machine": "TM",
+              "name": "Hidden Power",
+              "lvl": 10
+            },
+            {
+              "machine": "TM",
+              "name": "Ice Beam",
+              "lvl": 13
+            },
+            {
+              "machine": "TM",
+              "name": "Blizzard",
+              "lvl": 14
+            },
+            {
+              "machine": "TM",
+              "name": "Protect",
+              "lvl": 17
+            },
+            {
+              "machine": "TM",
+              "name": "Rain Dance",
+              "lvl": 18
+            },
+            {
+              "machine": "TM",
+              "name": "Frustration",
+              "lvl": 21
+            },
+            {
+              "machine": "TM",
+              "name": "Iron Tail",
+              "lvl": 23
+            },
+            {
+              "machine": "TM",
+              "name": "Return",
+              "lvl": 27
+            },
+            {
+              "machine": "TM",
+              "name": "Dig",
+              "lvl": 28
+            },
+            {
+              "machine": "TM",
+              "name": "Brick Break",
+              "lvl": 31
+            },
+            {
+              "machine": "TM",
+              "name": "Double Team",
+              "lvl": 32
+            },
+            {
+              "machine": "TM",
+              "name": "Rock Tomb",
+              "lvl": 39
+            },
+            {
+              "machine": "TM",
+              "name": "Facade",
+              "lvl": 42
+            },
+            {
+              "machine": "TM",
+              "name": "Secret Power",
+              "lvl": 43
+            },
+            {
+              "machine": "TM",
+              "name": "Rest",
+              "lvl": 44
+            },
+            {
+              "machine": "TM",
+              "name": "Attract",
+              "lvl": 45
+            },
+            {
+              "machine": "TM",
+              "name": "Brine",
+              "lvl": 55
+            },
+            {
+              "machine": "TM",
+              "name": "Fling",
+              "lvl": 56
+            },
+            {
+              "machine": "TM",
+              "name": "Endure",
+              "lvl": 58
+            },
+            {
+              "machine": "TM",
+              "name": "Gyro Ball",
+              "lvl": 74
+            },
+            {
+              "machine": "TM",
+              "name": "Captivate",
+              "lvl": 78
+            },
+            {
+              "machine": "TM",
+              "name": "Sleep Talk",
+              "lvl": 82
+            },
+            {
+              "machine": "TM",
+              "name": "Natural Gift",
+              "lvl": 83
+            },
+            {
+              "machine": "TM",
+              "name": "Swagger",
+              "lvl": 87
+            },
+            {
+              "machine": "TM",
+              "name": "Substitute",
+              "lvl": 90
+            },
+            {
+              "machine": "HM",
+              "name": "Surf",
+              "lvl": 3
+            },
+            {
+              "machine": "HM",
+              "name": "Strength",
+              "lvl": 4
+            },
+            {
+              "machine": "HM",
+              "name": "Rock Smash",
+              "lvl": 6
+            },
+            {
+              "machine": "HM",
+              "name": "Waterfall",
+              "lvl": 7
+            },
+            {
+              "name": "Aqua Jet"
+            },
+            {
+              "name": "Aqua Ring"
+            },
+            {
+              "name": "Fake Out"
+            },
+            {
+              "name": "Flail"
+            },
+            {
+              "name": "Foresight"
+            },
+            {
+              "name": "Haze"
+            },
+            {
+              "name": "Mirror Coat"
+            },
+            {
+              "name": "Mist"
+            },
+            {
+              "name": "Mud Sport"
+            },
+            {
+              "name": "Muddy Water"
+            },
+            {
+              "name": "Refresh"
+            },
+            {
+              "name": "Yawn"
+            }
+          ]
+        }
+      },
+      {
+        "name": "WARTORTLE",
+        "type": "Water",
+        "ability": "Torrent",
+        "exp": 1059860,
+        "stats": {
+          "HP": 59,
+          "ATK": 63,
+          "DEF": 80,
+          "SPD": 58,
+          "SAT": 65,
+          "SDF": 80
+        },
+        "evolutions": {
+          "evolution": [
+            {
+              "name": "Squirtle"
+            },
+            {
+              "name": "Wartortle",
+              "lvl": 16
+            },
+            {
+              "name": "Blastoise",
+              "lvl": 36
+            }
+          ]
+        },
+        "ratio": {
+          "male": 87.5,
+          "female": 12.5
+        },
+        "egg-group": [
+          "Monster",
+          "Water"
+        ],
+        "species": "Turtle Pokemon",
+        "height": 1,
+        "weight": 22.5,
+        "description": "It is said to live 10,000 years. Its furry tail is popular as a symbol of\n      longevity.",
+        "moves": {
+          "move": [
+            {
+              "name": "Tackle",
+              "lvl": 1
+            },
+            {
+              "name": "Tail Whip",
+              "lvl": 1
+            },
+            {
+              "name": "Bubble",
+              "lvl": 1
+            },
+            {
+              "name": "Tail Whip",
+              "lvl": 4
+            },
+            {
+              "name": "Bubble",
+              "lvl": 7
+            },
+            {
+              "name": "Withdraw",
+              "lvl": 10
+            },
+            {
+              "name": "Water Gun",
+              "lvl": 13
+            },
+            {
+              "name": "Bite",
+              "lvl": 16
+            },
+            {
+              "name": "Rapid Spin",
+              "lvl": 20
+            },
+            {
+              "name": "Protect",
+              "lvl": 24
+            },
+            {
+              "name": "Water Pulse",
+              "lvl": 28
+            },
+            {
+              "name": "Aqua Tail",
+              "lvl": 32
+            },
+            {
+              "name": "Skull Bash",
+              "lvl": 36
+            },
+            {
+              "name": "Rain Dance",
+              "lvl": 40
+            },
+            {
+              "name": "Hydro Pump",
+              "lvl": 44
+            },
+            {
+              "machine": "TM",
+              "name": "Focus Punch",
+              "lvl": 1
+            },
+            {
+              "machine": "TM",
+              "name": "Water Pulse",
+              "lvl": 3
+            },
+            {
+              "machine": "TM",
+              "name": "Toxic",
+              "lvl": 6
+            },
+            {
+              "machine": "TM",
+              "name": "Hail",
+              "lvl": 7
+            },
+            {
+              "machine": "TM",
+              "name": "Hidden Power",
+              "lvl": 10
+            },
+            {
+              "machine": "TM",
+              "name": "Ice Beam",
+              "lvl": 13
+            },
+            {
+              "machine": "TM",
+              "name": "Blizzard",
+              "lvl": 14
+            },
+            {
+              "machine": "TM",
+              "name": "Protect",
+              "lvl": 17
+            },
+            {
+              "machine": "TM",
+              "name": "Rain Dance",
+              "lvl": 18
+            },
+            {
+              "machine": "TM",
+              "name": "Frustration",
+              "lvl": 21
+            },
+            {
+              "machine": "TM",
+              "name": "Iron Tail",
+              "lvl": 23
+            },
+            {
+              "machine": "TM",
+              "name": "Return",
+              "lvl": 27
+            },
+            {
+              "machine": "TM",
+              "name": "Dig",
+              "lvl": 28
+            },
+            {
+              "machine": "TM",
+              "name": "Brick Break",
+              "lvl": 31
+            },
+            {
+              "machine": "TM",
+              "name": "Double Team",
+              "lvl": 32
+            },
+            {
+              "machine": "TM",
+              "name": "Rock Tomb",
+              "lvl": 39
+            },
+            {
+              "machine": "TM",
+              "name": "Facade",
+              "lvl": 42
+            },
+            {
+              "machine": "TM",
+              "name": "Secret Power",
+              "lvl": 43
+            },
+            {
+              "machine": "TM",
+              "name": "Rest",
+              "lvl": 44
+            },
+            {
+              "machine": "TM",
+              "name": "Attract",
+              "lvl": 45
+            },
+            {
+              "machine": "TM",
+              "name": "Brine",
+              "lvl": 55
+            },
+            {
+              "machine": "TM",
+              "name": "Fling",
+              "lvl": 56
+            },
+            {
+              "machine": "TM",
+              "name": "Endure",
+              "lvl": 58
+            },
+            {
+              "machine": "TM",
+              "name": "Gyro Ball",
+              "lvl": 74
+            },
+            {
+              "machine": "TM",
+              "name": "Captivate",
+              "lvl": 78
+            },
+            {
+              "machine": "TM",
+              "name": "Sleep Talk",
+              "lvl": 82
+            },
+            {
+              "machine": "TM",
+              "name": "Natural Gift",
+              "lvl": 83
+            },
+            {
+              "machine": "TM",
+              "name": "Swagger",
+              "lvl": 87
+            },
+            {
+              "machine": "TM",
+              "name": "Substitute",
+              "lvl": 90
+            },
+            {
+              "machine": "HM",
+              "name": "Surf",
+              "lvl": 3
+            },
+            {
+              "machine": "HM",
+              "name": "Strength",
+              "lvl": 4
+            },
+            {
+              "machine": "HM",
+              "name": "Rock Smash",
+              "lvl": 6
+            },
+            {
+              "machine": "HM",
+              "name": "Waterfall",
+              "lvl": 7
+            }
+          ]
+        }
+      },
+      {
+        "name": "BLASTOISE",
+        "type": "Water",
+        "ability": "Torrent",
+        "exp": 1059860,
+        "stats": {
+          "HP": 79,
+          "ATK": 83,
+          "DEF": 100,
+          "SPD": 78,
+          "SAT": 85,
+          "SDF": 105
+        },
+        "evolutions": {
+          "evolution": [
+            {
+              "name": "Squirtle"
+            },
+            {
+              "name": "Wartortle",
+              "lvl": 16
+            },
+            {
+              "name": "Blastoise",
+              "lvl": 36
+            }
+          ]
+        },
+        "ratio": {
+          "male": 87.5,
+          "female": 12.5
+        },
+        "egg-group": [
+          "Monster",
+          "Water"
+        ],
+        "species": "Shellfish Pokemon",
+        "height": 1.6,
+        "weight": 85.5,
+        "description": "The jets of water it spouts from the rocket cannons on its shell can punch through\n      thick steel.",
+        "moves": {
+          "move": [
+            {
+              "name": "Flash Cannon",
+              "lvl": 1
+            },
+            {
+              "name": "Tackle",
+              "lvl": 1
+            },
+            {
+              "name": "Tail Whip",
+              "lvl": 1
+            },
+            {
+              "name": "Bubble",
+              "lvl": 1
+            },
+            {
+              "name": "Withdraw",
+              "lvl": 1
+            },
+            {
+              "name": "Tail Whip",
+              "lvl": 4
+            },
+            {
+              "name": "Bubble",
+              "lvl": 7
+            },
+            {
+              "name": "Withdraw",
+              "lvl": 10
+            },
+            {
+              "name": "Water Gun",
+              "lvl": 13
+            },
+            {
+              "name": "Bite",
+              "lvl": 16
+            },
+            {
+              "name": "Rapid Spin",
+              "lvl": 20
+            },
+            {
+              "name": "Protect",
+              "lvl": 24
+            },
+            {
+              "name": "Water Pulse",
+              "lvl": 28
+            },
+            {
+              "name": "Aqua Tail",
+              "lvl": 32
+            },
+            {
+              "name": "Skull Bash",
+              "lvl": 39
+            },
+            {
+              "name": "Rain Dance",
+              "lvl": 46
+            },
+            {
+              "name": "Hydro Pump",
+              "lvl": 53
+            },
+            {
+              "machine": "TM",
+              "name": "Focus Punch",
+              "lvl": 1
+            },
+            {
+              "machine": "TM",
+              "name": "Water Pulse",
+              "lvl": 3
+            },
+            {
+              "machine": "TM",
+              "name": "Roar",
+              "lvl": 5
+            },
+            {
+              "machine": "TM",
+              "name": "Toxic",
+              "lvl": 6
+            },
+            {
+              "machine": "TM",
+              "name": "Hail",
+              "lvl": 7
+            },
+            {
+              "machine": "TM",
+              "name": "Hidden Power",
+              "lvl": 10
+            },
+            {
+              "machine": "TM",
+              "name": "Ice Beam",
+              "lvl": 13
+            },
+            {
+              "machine": "TM",
+              "name": "Blizzard",
+              "lvl": 14
+            },
+            {
+              "machine": "TM",
+              "name": "Hyper Beam",
+              "lvl": 15
+            },
+            {
+              "machine": "TM",
+              "name": "Protect",
+              "lvl": 17
+            },
+            {
+              "machine": "TM",
+              "name": "Rain Dance",
+              "lvl": 18
+            },
+            {
+              "machine": "TM",
+              "name": "Frustration",
+              "lvl": 21
+            },
+            {
+              "machine": "TM",
+              "name": "Iron Tail",
+              "lvl": 23
+            },
+            {
+              "machine": "TM",
+              "name": "Earthquake",
+              "lvl": 26
+            },
+            {
+              "machine": "TM",
+              "name": "Return",
+              "lvl": 27
+            },
+            {
+              "machine": "TM",
+              "name": "Dig",
+              "lvl": 28
+            },
+            {
+              "machine": "TM",
+              "name": "Brick Break",
+              "lvl": 31
+            },
+            {
+              "machine": "TM",
+              "name": "Double Team",
+              "lvl": 32
+            },
+            {
+              "machine": "TM",
+              "name": "Rock Tomb",
+              "lvl": 39
+            },
+            {
+              "machine": "TM",
+              "name": "Facade",
+              "lvl": 42
+            },
+            {
+              "machine": "TM",
+              "name": "Secret Power",
+              "lvl": 43
+            },
+            {
+              "machine": "TM",
+              "name": "Rest",
+              "lvl": 44
+            },
+            {
+              "machine": "TM",
+              "name": "Attract",
+              "lvl": 45
+            },
+            {
+              "machine": "TM",
+              "name": "Focus Blast",
+              "lvl": 52
+            },
+            {
+              "machine": "TM",
+              "name": "Brine",
+              "lvl": 55
+            },
+            {
+              "machine": "TM",
+              "name": "Fling",
+              "lvl": 56
+            },
+            {
+              "machine": "TM",
+              "name": "Endure",
+              "lvl": 58
+            },
+            {
+              "machine": "TM",
+              "name": "Giga Impact",
+              "lvl": 68
+            },
+            {
+              "machine": "TM",
+              "name": "Avalanche",
+              "lvl": 72
+            },
+            {
+              "machine": "TM",
+              "name": "Gyro Ball",
+              "lvl": 74
+            },
+            {
+              "machine": "TM",
+              "name": "Captivate",
+              "lvl": 78
+            },
+            {
+              "machine": "TM",
+              "name": "Rock Slide",
+              "lvl": 80
+            },
+            {
+              "machine": "TM",
+              "name": "Sleep Talk",
+              "lvl": 82
+            },
+            {
+              "machine": "TM",
+              "name": "Natural Gift",
+              "lvl": 83
+            },
+            {
+              "machine": "TM",
+              "name": "Swagger",
+              "lvl": 87
+            },
+            {
+              "machine": "TM",
+              "name": "Substitute",
+              "lvl": 90
+            },
+            {
+              "machine": "TM",
+              "name": "Flash Cannon",
+              "lvl": 91
+            },
+            {
+              "machine": "HM",
+              "name": "Surf",
+              "lvl": 3
+            },
+            {
+              "machine": "HM",
+              "name": "Strength",
+              "lvl": 4
+            },
+            {
+              "machine": "HM",
+              "name": "Rock Smash",
+              "lvl": 6
+            },
+            {
+              "machine": "HM",
+              "name": "Waterfall",
+              "lvl": 7
+            },
+            {
+              "machine": "HM",
+              "name": "Rock Climb",
+              "lvl": 8
+            }
+          ]
+        }
+      },
+      {
+        "name": "CATERPIE",
+        "type": "Bug",
+        "ability": "Shield",
+        "exp": 1000000,
+        "stats": {
+          "HP": 45,
+          "ATK": 30,
+          "DEF": 35,
+          "SPD": 45,
+          "SAT": 20,
+          "SDF": 20
+        },
+        "evolutions": {
+          "evolution": [
+            {
+              "name": "Caterpie"
+            },
+            {
+              "name": "Metapod",
+              "lvl": 7
+            },
+            {
+              "name": "Butterfree",
+              "lvl": 10
+            }
+          ]
+        },
+        "egg-group": "Bug",
+        "species": "Worm Pokemon",
+        "height": 0.3,
+        "weight": 2.9,
+        "description": "It releases a stench from its red antenna to repel enemies. It grows by molting\n      repeatedly.",
+        "moves": {
+          "move": [
+            {
+              "name": "Tackle",
+              "lvl": 1
+            },
+            {
+              "name": "String Shot",
+              "lvl": 1
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

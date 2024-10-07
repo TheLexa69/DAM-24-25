@@ -1,0 +1,59 @@
+{"juegos_android": [
+    {
+        "descripcion": "Un juego de aventuras épicas donde deberás explorar tierras desconocidas y enfrentar a criaturas legendarias.",
+        "imagenes": [
+            "imagen1.png",
+            "imagen2.png",
+            "imagen3.png"
+        ],
+        "idiomas_disponibles": [
+            "Espanol",
+            "Ingles",
+            "Frances"
+        ],
+        "nombre": "Adventure Quest",
+        "version": "1.2.5",
+        "comentarios": [
+            {
+                "usuario_id": "u123",
+                "avatar": "avatar1.png",
+                "comentario": "Es un juego increíble, me encanta la historia y la jugabilidad.",
+                "nombre_usuario": "Juan Gamer"
+            },
+            {
+                "usuario_id": "u124",
+                "avatar": "avatar2.png",
+                "comentario": "Los gráficos son impresionantes, pero los controles podrían mejorar.",
+                "nombre_usuario": "Ana Aventurera"
+            }
+        ]
+    },
+    {
+        "descripcion": "Un desafiante juego de rompecabezas con niveles cada vez más complicados.",
+        "imagenes": [
+            "imagen4.png",
+            "imagen5.png",
+            "imagen6.png"
+        ],
+        "idiomas_disponibles": [
+            "Espanol",
+            "Ingles"
+        ],
+        "nombre": "Puzzle Master",
+        "version": "3.0.1",
+        "comentarios": [
+            {
+                "usuario_id": "u125",
+                "avatar": "avatar3.png",
+                "comentario": "Muy entretenido, los niveles son cada vez más complicados y divertidos.",
+                "nombre_usuario": "Carlos Puzzles"
+            },
+            {
+                "usuario_id": "u126",
+                "avatar": "avatar4.png",
+                "comentario": "Es bueno para pasar el tiempo, pero algunos niveles son frustrantes.",
+                "nombre_usuario": "Maria Razonable"
+            }
+        ]
+    }
+]}

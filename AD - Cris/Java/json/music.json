@@ -1,0 +1,34 @@
+{"listas_de_reproduccion": [
+    {
+        "canciones": [
+            {
+                "titulo": "Bohemian Rhapsody",
+                "duracion": "5:55",
+                "autor": "Queen"
+            },
+            {
+                "titulo": "Hotel California",
+                "duracion": "6:30",
+                "autor": "Eagles"
+            }
+        ],
+        "fecha_creacion": "2024-09-29",
+        "nombre": "Lista de Rock"
+    },
+    {
+        "canciones": [
+            {
+                "titulo": "Bad Guy",
+                "duracion": "3:14",
+                "autor": "Billie Eilish"
+            },
+            {
+                "titulo": "Blinding Lights",
+                "duracion": "3:22",
+                "autor": "The Weeknd"
+            }
+        ],
+        "fecha_creacion": "2024-09-29",
+        "nombre": "Lista de Pop"
+    }
+]}
