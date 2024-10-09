@@ -11,7 +11,7 @@ public static void main(String[] args) {
             ObjectMapper mapper = new ObjectMapper();
             List<Game> games = mapper.readValue(new File("games.json"), new TypeReference<List<Game>>() {});
 
-            // Visualizar la lista de objetos Game
+            //Imprimo la lista de objetos Game para ver por pantalla
             for (Game game : games) {
                 System.out.println(game);
             }

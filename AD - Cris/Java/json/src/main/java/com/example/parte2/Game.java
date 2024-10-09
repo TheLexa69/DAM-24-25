@@ -11,6 +11,8 @@ public class Game implements Serializable {
     private List<String> idiomas;
     private Map<String, String> comentarios;
 
+    public Game() {}
+
     public Game(String nombre, String descripcion, List<String> idiomas, Map<String, String> comentarios) {
         this.nombre = nombre;
         this.descripcion = descripcion;
