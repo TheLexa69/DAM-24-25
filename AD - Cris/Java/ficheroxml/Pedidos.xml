@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pedidos>
+  <pedido>
+    <idPedido>1</idPedido>
+    <nomeCliente>Pedro</nomeCliente>
+    <productos>
+      <producto>
+        <idProducto>100</idProducto>
+        <descricion>Monitor</descricion>
+        <idPrezo>100.0</idPrezo>
+      </producto>
+      <producto>
+        <idProducto>101</idProducto>
+        <descricion>Rato</descricion>
+        <idPrezo>10.0</idPrezo>
+      </producto>
+    </productos>
+  </pedido>
+  <pedido>
+    <idPedido>2</idPedido>
+    <nomeCliente>Juan</nomeCliente>
+    <productos>
+      <producto>
+        <idProducto>102</idProducto>
+        <descricion>portatil</descricion>
+        <idPrezo>600.0</idPrezo>
+      </producto>
+      <producto>
+        <idProducto>103</idProducto>
+        <descricion>tablet</descricion>
+        <idPrezo>400.0</idPrezo>
+      </producto>
+    </productos>
+  </pedido>
+</pedidos>
