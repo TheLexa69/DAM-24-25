@@ -34,7 +34,7 @@ public class Coches {
         }catch (IOException e){
             System.out.println("No se ha realizado la escritura.");
         }
-
+        
     }
     public static StringBuilder formatearTabla(Map<String,List<String>> tablaMarcas){
         StringBuilder sb = new StringBuilder();
