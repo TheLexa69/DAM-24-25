@@ -1,4 +1,4 @@
-package bdteis1;
+package bdteis1.Model;
 
 import java.sql.*;
 
@@ -22,5 +22,9 @@ public class ConexionMySQL {
             e.printStackTrace();
         }
         return conn;
+    }
+
+    public void cerrarMySQL(Connection conn) throws SQLException {
+        conn.close();
     }
 }

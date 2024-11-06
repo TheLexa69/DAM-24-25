@@ -6,9 +6,6 @@
 package bdteis1;
 
 import java.sql.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 
 /**
  * @author luis.canal
@@ -16,10 +13,13 @@ import java.util.logging.Logger;
 public class BdTeis1 {
 
     public static void main(String[] args) {
-        ModelPais mp = new ModelPais();
+        //ModelPais mp = new ModelPais();
 
+        HomeController hc = new HomeController();
 
-        try {
+        hc.showMenu();
+
+        /*try {
             ConexionMySQL con = new ConexionMySQL();
             Connection connection = con.conectarMySQL();
 
@@ -44,7 +44,7 @@ public class BdTeis1 {
 
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
 

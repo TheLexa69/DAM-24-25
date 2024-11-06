@@ -5,10 +5,10 @@
  */
 package bdteis1;
 
-import java.sql.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import bdteis1.Model.ConexionMySQL;
+import bdteis1.Model.SQLPais;
 
+import java.sql.*;
 
 /**
  * @author luis.canal
@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 public class BdTeis1 {
 
     public static void main(String[] args) {
-        ModelPais mp = new ModelPais();
+        SQLPais mp = new SQLPais();
 
 
         try {
@@ -32,12 +32,12 @@ public class BdTeis1 {
             mp.showPaises(connection);
 
             //ACTUALIZAMOS UN PAIS SEGUN SUS NECESIDADES (PAIS o MONEDAS o CAPITAL....)
-            boolean success2 = mp.updatePais(connection, 31, "Australia", null, null, null);
+            boolean success2 = mp.updatePais(connection, 30, "Australia", null, null, null);
             System.out.println(success2 == true ? "Se ha actualizado correctamente" : "No se ha actualizado correctamente");
             mp.showPaises(connection);
 
             //BORRAMOS Y ACTUALIZAMOS EL AUTOINCREMENT
-            boolean success3 = mp.deletePais(connection, 30);
+            boolean success3 = mp.deletePais(connection, 30 );
             System.out.println(success3 == true ? "Se ha borrado correctamente" : "No se ha borrado correctamente");
             mp.showPaises(connection);
 

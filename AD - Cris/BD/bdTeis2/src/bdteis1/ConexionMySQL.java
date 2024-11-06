@@ -23,4 +23,8 @@ public class ConexionMySQL {
         }
         return conn;
     }
+
+    public void cerrarMySQL(Connection conn) throws SQLException {
+        conn.close();
+    }
 }
