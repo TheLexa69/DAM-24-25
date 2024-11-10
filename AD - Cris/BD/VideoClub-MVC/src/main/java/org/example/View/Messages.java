@@ -26,6 +26,18 @@ public class Messages {
         System.out.println("0. Salir");
     }
 
+    public void showMenuTematica(){
+        System.out.println("Seleccione la temática de la película:");
+        System.out.println("1. Accion");
+        System.out.println("2. Aventura");
+        System.out.println("3. Ciencia Ficcion");
+        System.out.println("4. Romance");
+        System.out.println("5. Terror");
+        System.out.print("Ingrese el número de la opción: ");
+    }
+
+
+
     public String showAllPeliculas(int identificador, String titulo, String actor, String guion, Boolean disponible, Pelicula.Tematica tematica) {
         Pelicula pelicula = new Pelicula(identificador, titulo, actor, guion, disponible, tematica);
         return pelicula.toString();

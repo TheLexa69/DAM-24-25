@@ -183,20 +183,22 @@ public class SQLPeliculas {
         return false;
     }
 
-    public boolean insertFilm(Connection con) {
-        String query = "INSERT INTO pelicula values () WHERE identificador = ?";
-        try (PreparedStatement preparedStatement = con.prepareStatement(query)) {
-            preparedStatement.setInt(1, idNumerico);
+    public boolean insertFilm(Connection c, String titulo, String actor, Pelicula.Tematica tematica, String guion, Boolean disponible) throws SQLException {
+        String query = "INSERT INTO pelicula (titulo, actor, tematica, guion, disponible) VALUES (?, ?, ?, ?, ?)";
+
+        try (PreparedStatement preparedStatement = c.prepareStatement(query)) {
+            preparedStatement.setString(1, titulo);
+            preparedStatement.setString(2, actor);
+            preparedStatement.setString(3, tematica.name());
+            preparedStatement.setString(4, guion);
+            preparedStatement.setBoolean(5, disponible);
 
             int rowsAffected = preparedStatement.executeUpdate();
-
-            System.out.println("Se han borrado: " + rowsAffected + " filas!");
+            System.out.println("Se han actualizado: " + rowsAffected + " filas!");
             return rowsAffected > 0;
         } catch (SQLException e) {
-            System.err.println("Error en la consulta a la base de datos: " + e.getMessage());
-        } catch (Exception e) {
-            System.err.println("Error inesperado: " + e.getMessage());
+            System.err.println("Error al insertar la película: " + e.getMessage());
+            return false;
         }
-        return false;
     }
 }

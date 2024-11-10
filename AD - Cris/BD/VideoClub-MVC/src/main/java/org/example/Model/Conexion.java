@@ -11,7 +11,7 @@ public class Conexion {
     private static final String PORT = "3306";
     private static final String URL = "jdbc:mysql://" + HOSTNAME + ":" + PORT + "/" + DATABASE;
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "root";
+    private static final String PASSWORD = "";//CON XAMPP NO NECESITO CONTRASEÑA EN EL INSTITUTO SI: root
 
 
 
@@ -27,6 +27,11 @@ public class Conexion {
     }
 
     public void cerrarMySQL(Connection conn) throws SQLException {
-        conn.close();
+        if (conn != null && !conn.isClosed()) {
+            conn.close();
+            System.out.println("Conexión cerrada correctamente.");
+        } else {
+            System.out.println("Conexión ya estaba cerrada o es nula.");
+        }
     }
 }

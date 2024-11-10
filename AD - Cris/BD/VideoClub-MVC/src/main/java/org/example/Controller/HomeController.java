@@ -260,7 +260,6 @@ public class HomeController {
                                     //scanner.next();
 
 
-
                                     break;
 
                                 case 0:
@@ -303,20 +302,100 @@ public class HomeController {
         }
     }
 
-    public boolean nuevaPelicula(){
+    public void insertarPelicula() {
         try {
             if (connection != null) {
                 Connection c = connection.conectarMySQL();
-                sqlpeliculas.insertFilm(c);
+                
+                String titulo;
+                do {
+                    System.out.print("Ingrese el título de la película: ");
+                    titulo = scanner.nextLine().trim();
+                    if (titulo.isEmpty()) {
+                        System.out.println("El título es obligatorio. Por favor, ingréselo.");
+                    }
+                } while (titulo.isEmpty());
+
+                String actor;
+                do {
+                    System.out.print("Ingrese el actor de la película: ");
+                    actor = scanner.nextLine().trim();
+                    if (actor.isEmpty()) {
+                        System.out.println("El actor es obligatorio. Por favor, ingréselo.");
+                    }
+                } while (actor.isEmpty());
+
+                int opcionTematica = 1;
+                boolean entradaValida = false;
+
+                while (!entradaValida) {
+                    try {
+                        messages.showMenuTematica();
+                        opcionTematica = Integer.parseInt(scanner.nextLine()); // Leer la entrada y convertirla a entero
+                        if (opcionTematica >= 1 && opcionTematica <= 5) {
+                            entradaValida = true; // Entrada válida
+                        } else {
+                            System.out.println("Error: seleccione un número del 1 al 5.");
+                        }
+                    } catch (NumberFormatException e) {
+                        System.out.println("Error: por favor, ingrese un número válido.");
+                    }
+                }
+
+                Pelicula.Tematica tematica = null;
+                switch (opcionTematica) {
+                    case 1:
+                        tematica = Pelicula.Tematica.Accion;
+                        break;
+                    case 2:
+                        tematica = Pelicula.Tematica.Aventura;
+                        break;
+                    case 3:
+                        tematica = Pelicula.Tematica.Ciencia_Ficcion;
+                        break;
+                    case 4:
+                        tematica = Pelicula.Tematica.Romance;
+                        break;
+                    case 5:
+                        tematica = Pelicula.Tematica.Terror;
+                        break;
+                }
+
+                String guion;
+                do {
+                    System.out.print("Ingrese el guion de la película: ");
+                    guion = scanner.nextLine().trim();
+                    if (guion.isEmpty()) {
+                        System.out.println("El guion es obligatorio. Por favor, ingréselo.");
+                    }
+                } while (guion.isEmpty());
+
+                System.out.print("¿Está disponible la película? (true/false): ");
+                Boolean disponible = scanner.nextBoolean();
+
+                // Insertar la película en la base de datos
+                sqlpeliculas.insertFilm(c, titulo, actor, tematica, guion, disponible);
+                System.out.println("Película insertada con éxito.");
             } else {
                 System.err.println("No se pudo establecer la conexión a la base de datos.");
             }
         } catch (Exception e) {
-            System.out.println(
-                    "Error al conectar con la base de datos" + e.getMessage()
-            );
+            System.out.println("Error al conectar con la base de datos: " + e.getMessage());
         }
-        return false;
     }
+
+    public void cerrarConexion() throws SQLException {
+        if (connection != null) {
+            try {
+                connection.cerrarMySQL(connection.conectarMySQL());
+            } catch (SQLException e) {
+                System.err.println("Error al cerrar la conexión: " + e.getMessage());
+                throw e;
+            }
+        } else {
+            System.out.println("La conexión ya está cerrada o no se ha iniciado.");
+        }
+    }
+
 
 }
