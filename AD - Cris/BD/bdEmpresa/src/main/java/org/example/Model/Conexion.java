@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Conexion {
 
-    private static final String DATABASE = "videoclub";
+    private static final String DATABASE = "bdempresa";
     private static final String HOSTNAME = "localhost";
     private static final String PORT = "3306";
     private static final String URL = "jdbc:mysql://" + HOSTNAME + ":" + PORT + "/" + DATABASE;
