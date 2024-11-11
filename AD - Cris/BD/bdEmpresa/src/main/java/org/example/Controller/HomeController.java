@@ -58,6 +58,24 @@ public class HomeController {
         }
     }
 
+    //2.2
+    public void listarTrabajadoresCiudad(){
+        try {
+            if (connection != null) {
+                Connection c = connection.conectarMySQL();
+                sqlEmpresa.workersByCity(c, "Vigo");
+            } else {
+                System.err.println("No se pudo establecer la conexión a la base de datos.");
+            }
+        } catch (Exception e) {
+            System.out.println(
+                    "Error al conectar con la base de datos" + e.getMessage()
+            );
+        }
+    }
+
+
+
     public void listarTrabajadoresProyectos(){
         try {
             if (connection != null) {

@@ -14,7 +14,11 @@ public class Main {
         //-- -- hc.nuevoDepartamento();
 
         //EXERCICIO 2.1 (C)
-        hc.borrarTrabajadorProyecto();
+        //-- -- hc.borrarTrabajadorProyecto();
+
+
+        //EXERCICIO 2.2
+        //-- -- hc.listarTrabajadoresCiudad();
 
         //hc.listarTrabajadoresProyectos();
 
