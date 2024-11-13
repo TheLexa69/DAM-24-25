@@ -7,7 +7,7 @@ public class Proxecto {
     private String lugar;
     private int num_departamento;
 
-    public Proxecto(){}
+    //public Proxecto(){}
 
     public Proxecto(int num_proxecto, String nome_proxecto, String lugar, int num_departamento) {
         this.num_proxecto = num_proxecto;

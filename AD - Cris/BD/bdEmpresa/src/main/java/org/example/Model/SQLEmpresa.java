@@ -112,7 +112,7 @@ public class SQLEmpresa {
     /*Realiza un programa Java para establecer unha conexión co SXBD MySQL, acceda á base de datos BDEmpresa, implemente e chame os seguintes métodos.
     * Utiliza sentencias pre-compiladas (preparadas) e controla os posibles erros. Separa a chamada aos métodos da implementación deles en clases diferentes.
     * a) Fai un método para cambiar o departamento que controla un proxecto. O método recibirá como parámetros o nome do departamento e o nome do proxecto
-        */
+    */
     public boolean updateDepartment(Connection con, String nomeDepartamento, String nomeProxecto){
         String queryDepartamento = "SELECT * FROM Departamento WHERE Nome_departamento = ?";
         String queryProxecto = "UPDATE Proxecto SET Num_departamento = ? WHERE Nome_proxecto = ?";
@@ -146,6 +146,9 @@ public class SQLEmpresa {
         return false;
     }
 
+    //CONFIRMAR EN CLASE SI ESTA BIEN
+    //b) Fai un método para inserir un novo proxecto. O método recibirá como parámetro un obxecto proxecto.
+    // Crea a clase proxecto, cos métodos setter e getter, e coa mesma estrutura que a táboa proxecto.
     public boolean insertProject(Connection con, Proxecto proxecto){
         String query = "INSERT INTO proxecto (num_proxecto, nome_proxecto, lugar, num_departamento) VALUES (?, ?, ?, ?)";
 
@@ -168,36 +171,64 @@ public class SQLEmpresa {
         return false;
     }
 
+    //CONFIRMAR EN CLASE SI ESTA BIEN
+    // c) Fai un método para borrar un proxecto. O método recibirá como parámetros o número do proxecto.
+    //  Tamén debes borrar a información da asignación dos empregados ao proxecto.
+    public void delProject(Connection con, int numProxecto) {
+        String deleteAsignacionQuery = "DELETE FROM Empregado_Proxecto WHERE Num_proxecto = ?";
+        String deleteProxectoQuery = "DELETE FROM Proxecto WHERE Num_proxecto = ?";
 
-
-
-
-
-
-
-
-    public void showWorkersInProject(Connection con) {
-
-        String query = "SELECT * FROM empregado_proxecto";
-        try (PreparedStatement preparedStatement = con.prepareStatement(query)) {
-            ResultSet resultSet = preparedStatement.executeQuery();
-
-            while (resultSet.next()) {
-                String idEmpleado = resultSet.getString("NSS_Empregado");
-                int num_proxecto = resultSet.getInt("Num_Proxecto");
-                int horas_semanales = resultSet.getInt("Horas_Semanais");
-
-
-                System.out.println(
-                        "ID: " + idEmpleado + "\n" +
-                                "Número de proyecto" + num_proxecto + "\n" +
-                                "Número de proyecto" + horas_semanales + "\n"
-                );
+        try {
+            // Borramos las asignaciones de los empleados al proyecto
+            try (PreparedStatement stmtAsignacion = con.prepareStatement(deleteAsignacionQuery)) {
+                stmtAsignacion.setInt(1, numProxecto);
+                int rowsDeletedAsignacion = stmtAsignacion.executeUpdate();
+                System.out.println("Asignación de empregados eliminada: " + rowsDeletedAsignacion + " filas afectadas.");
             }
-        } catch (Exception e) {
-            System.out.println("Error en showWorkProject() en SQLEmpresa.java" + e);
-            throw new RuntimeException(e);
+
+            // Borramos el proyecto
+            try (PreparedStatement stmtProxecto = con.prepareStatement(deleteProxectoQuery)) {
+                stmtProxecto.setInt(1, numProxecto);
+                int rowsDeletedProxecto = stmtProxecto.executeUpdate();
+                if (rowsDeletedProxecto > 0) {
+                    System.out.println("Proxecto eliminado exitosamente: " + numProxecto);
+                } else {
+                    System.out.println("Non se puido eliminar o proxecto. Verifique se o proxecto existe.");
+                }
+            }
+        } catch (SQLException e) {
+            System.err.println("Error ao eliminar o proxecto: " + e.getMessage());
         }
     }
+
+
+
+
+
+
+
+//    public void showWorkersInProject(Connection con) {
+//
+//        String query = "SELECT * FROM empregado_proxecto";
+//        try (PreparedStatement preparedStatement = con.prepareStatement(query)) {
+//            ResultSet resultSet = preparedStatement.executeQuery();
+//
+//            while (resultSet.next()) {
+//                String idEmpleado = resultSet.getString("NSS_Empregado");
+//                int num_proxecto = resultSet.getInt("Num_Proxecto");
+//                int horas_semanales = resultSet.getInt("Horas_Semanais");
+//
+//
+//                System.out.println(
+//                        "ID: " + idEmpleado + "\n" +
+//                                "Número de proyecto" + num_proxecto + "\n" +
+//                                "Número de proyecto" + horas_semanales + "\n"
+//                );
+//            }
+//        } catch (Exception e) {
+//            System.out.println("Error en showWorkProject() en SQLEmpresa.java" + e);
+//            throw new RuntimeException(e);
+//        }
+//    }
 
 }

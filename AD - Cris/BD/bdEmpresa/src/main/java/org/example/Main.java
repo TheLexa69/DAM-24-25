@@ -21,9 +21,10 @@ public class Main {
         //-- -- hc.listarTrabajadoresCiudad();
 
 
-        //EXERCICIO 2.3 (A)
-        hc.actualizarDepartamento();
-
+        //EXERCICIO 2.3
+        //hc.actualizarDepartamento(); //(A)
+        //hc.insertarProyecto(); //(B) CONFIRMAR EN CLASE SI ESTA BIEN
+        //hc.borrarProyecto(); //(C) CONFIRMAR EN CLASE SI ESTA BIEN
 
 
 

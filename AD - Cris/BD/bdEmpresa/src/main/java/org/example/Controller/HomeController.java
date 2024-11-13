@@ -1,6 +1,7 @@
 package org.example.Controller;
 
 import org.example.Model.Conexion;
+import org.example.Model.Proxecto;
 import org.example.Model.SQLEmpresa;
 
 import java.sql.Connection;
@@ -86,11 +87,25 @@ public class HomeController {
         }
     }
 
+    //CONFIRMAR EN CLASE SI ESTA BIEN
     public void insertarProyecto(){
         try{
             if (connection != null) {
                 Connection c = connection.conectarMySQL();
-                sqlEmpresa.insertProject();
+
+                Proxecto p = new Proxecto(11, "PROXECTO Y", "PONTEVEDRA", 3);
+                sqlEmpresa.insertProject(c, p);
+            }
+        } catch (Exception e){
+            System.out.println("Error al conectar con la base de datos " + e.getMessage());
+        }
+    }
+    //CONFIRMAR EN CLASE SI ESTA BIEN
+    public void borrarProyecto(){
+        try {
+            if (connection != null) {
+                Connection c = connection.conectarMySQL();
+                sqlEmpresa.delProject(c, 1);
             }
         } catch (Exception e){
             System.out.println("Error al conectar con la base de datos " + e.getMessage());
@@ -98,7 +113,7 @@ public class HomeController {
     }
 
 
-    public void listarTrabajadoresProyectos(){
+    /*public void listarTrabajadoresProyectos(){
         try {
             if (connection != null) {
                 Connection c = connection.conectarMySQL();
@@ -111,7 +126,7 @@ public class HomeController {
                     "Error al conectar con la base de datos" + e.getMessage()
             );
         }
-    }
+    }*/
 
 
 }
