@@ -2,7 +2,7 @@ package org.example.Model;
 
 import java.sql.*;
 
-public class SQLEmpresa {
+public class SQLEmpresa2_2 {
 
     //EXERCICIO 2.1
     //a) Fai un método para subir o salario aos empregados dun determinado departamento.
@@ -108,71 +108,6 @@ public class SQLEmpresa {
         }
         return false;
     }
-
-    /*Realiza un programa Java para establecer unha conexión co SXBD MySQL, acceda á base de datos BDEmpresa, implemente e chame os seguintes métodos.
-    * Utiliza sentencias pre-compiladas (preparadas) e controla os posibles erros. Separa a chamada aos métodos da implementación deles en clases diferentes.
-    * a) Fai un método para cambiar o departamento que controla un proxecto. O método recibirá como parámetros o nome do departamento e o nome do proxecto
-        */
-    public boolean updateDepartment(Connection con, String nomeDepartamento, String nomeProxecto){
-        String queryDepartamento = "SELECT * FROM Departamento WHERE Nome_departamento = ?";
-        String queryProxecto = "UPDATE Proxecto SET Num_departamento = ? WHERE Nome_proxecto = ?";
-
-        try {
-            PreparedStatement stmtDepartamento = con.prepareStatement(queryDepartamento);
-            stmtDepartamento.setString(1, nomeDepartamento);
-            ResultSet resultSet = stmtDepartamento.executeQuery();
-
-            if (resultSet.next()) {
-                int numDepartamento = resultSet.getInt("Num_departamento");
-
-                PreparedStatement stmtUpdate = con.prepareStatement(queryProxecto);
-                stmtUpdate.setInt(1, numDepartamento);
-                stmtUpdate.setString(2, nomeProxecto);
-
-                int rowsUpdated = stmtUpdate.executeUpdate();
-                if (rowsUpdated > 0) {
-                    System.out.println("Se han actualizado " + rowsUpdated + "fila");
-                    System.out.println("Departamento cambiado exitosamente para el proyecto: " + nomeProxecto);
-                } else {
-                    System.out.println("No se encontró el proyecto: " + nomeProxecto);
-                }
-            } else {
-                System.out.println("No se encontró el departamento: " + nomeDepartamento);
-            }
-
-        } catch (SQLException e) {
-            System.err.println("Error al cambiar el departamento: " + e.getMessage());
-        }
-        return false;
-    }
-
-    public boolean insertProject(Connection con, Proxecto proxecto){
-        String query = "INSERT INTO proxecto (num_proxecto, nome_proxecto, lugar, num_departamento) VALUES (?, ?, ?, ?)";
-
-        try (PreparedStatement stmt = con.prepareStatement(query)) {
-            stmt.setInt(1, proxecto.getNum_proxecto());
-            stmt.setString(2, proxecto.getNome_proxecto());
-            stmt.setString(3, proxecto.getLugar());
-            stmt.setInt(4, proxecto.getNum_departamento());
-
-            int rowsInserted = stmt.executeUpdate();
-            if (rowsInserted > 0) {
-                System.out.println("Se ha insertado " + rowsInserted + " fila");
-                System.out.println("Proxecto inserido exitosamente: " + proxecto.getNome_proxecto());
-            } else {
-                System.out.println("Non se puido inserir o proxecto.");
-            }
-        } catch (SQLException e) {
-            System.err.println("Error ao inserir o proxecto: " + e.getMessage());
-        }
-        return false;
-    }
-
-
-
-
-
-
 
 
 

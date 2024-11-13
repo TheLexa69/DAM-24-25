@@ -74,6 +74,28 @@ public class HomeController {
         }
     }
 
+    //2.3 (A)
+    public void actualizarDepartamento(){
+        try {
+            if (connection != null) {
+                Connection c = connection.conectarMySQL();
+                sqlEmpresa.updateDepartment(c, "Persoal", "Portal");
+            }
+        } catch (Exception e) {
+            System.out.println("Error al conectar con la base de datos" + e.getMessage());
+        }
+    }
+
+    public void insertarProyecto(){
+        try{
+            if (connection != null) {
+                Connection c = connection.conectarMySQL();
+                sqlEmpresa.insertProject();
+            }
+        } catch (Exception e){
+            System.out.println("Error al conectar con la base de datos " + e.getMessage());
+        }
+    }
 
 
     public void listarTrabajadoresProyectos(){

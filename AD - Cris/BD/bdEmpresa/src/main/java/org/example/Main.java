@@ -20,6 +20,15 @@ public class Main {
         //EXERCICIO 2.2
         //-- -- hc.listarTrabajadoresCiudad();
 
+
+        //EXERCICIO 2.3 (A)
+        hc.actualizarDepartamento();
+
+
+
+
+        //Exercicio 2.4
+
         //hc.listarTrabajadoresProyectos();
 
     }
