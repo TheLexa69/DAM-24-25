@@ -29,6 +29,18 @@ public class Main {
 
 
         //Exercicio 2.4
+        //hc.obtenerProxectosPorDepartamento(); //CONFIRMAR EN CLASE SI ESTA BIEN
+
+
+
+
+
+
+
+
+
+
+
 
         //hc.listarTrabajadoresProyectos();
 

@@ -5,6 +5,7 @@ import org.example.Model.Proxecto;
 import org.example.Model.SQLEmpresa;
 
 import java.sql.Connection;
+import java.util.List;
 
 public class HomeController {
 
@@ -112,6 +113,24 @@ public class HomeController {
         }
     }
 
+
+    //2.4 CONFIRMAR EN CLASE SI ESTA BIEN
+    public void obtenerProxectosPorDepartamento(){
+        try {
+            if (connection != null) {
+                Connection c = connection.conectarMySQL();
+                sqlEmpresa.delProject(c, 1);
+                List<Proxecto> proxectos = sqlEmpresa.getProjectsByDepartment(c, "INFORMÁTICA");
+                for (Proxecto proxecto : proxectos) {
+                    System.out.println("Proxecto: " + proxecto.getNome_proxecto() + ", Lugar: " + proxecto.getLugar());
+                }
+            }
+        } catch (Exception e){
+            System.out.println("Error al conectar con la base de datos " + e.getMessage());
+        }
+
+
+    }
 
     /*public void listarTrabajadoresProyectos(){
         try {

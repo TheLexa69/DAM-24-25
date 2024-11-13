@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SQLEmpresa {
+public class SQLEmpresa2_4 {
 
     //EXERCICIO 2.1
     //a) Fai un método para subir o salario aos empregados dun determinado departamento.

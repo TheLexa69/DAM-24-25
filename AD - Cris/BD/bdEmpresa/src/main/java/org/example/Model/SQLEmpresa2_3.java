@@ -1,10 +1,8 @@
 package org.example.Model;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
-public class SQLEmpresa {
+public class SQLEmpresa2_3 {
 
     //EXERCICIO 2.1
     //a) Fai un método para subir o salario aos empregados dun determinado departamento.
@@ -204,34 +202,7 @@ public class SQLEmpresa {
         }
     }
 
-    //EXERCICIO 2.4 //CONFIRMAR EN CLASE SI ESTA BIEN
-    public List<Proxecto> getProjectsByDepartment(Connection con, String nomeDepartamento) {
-        List<Proxecto> proxectos = new ArrayList<>();
-        String query = "SELECT p.Num_proxecto, p.Nome_proxecto, p.Lugar, p.Num_departamento " +
-                "FROM Proxecto p " +
-                "JOIN Departamento d ON p.Num_departamento = d.Num_departamento " +
-                "WHERE d.Nome_departamento = ?";
 
-        try (PreparedStatement stmt = con.prepareStatement(query)) {
-            stmt.setString(1, nomeDepartamento);
-            ResultSet resultSet = stmt.executeQuery();
-
-            while (resultSet.next()) {
-                int numProxecto = resultSet.getInt("Num_proxecto");
-                String nomeProxecto = resultSet.getString("Nome_proxecto");
-                String lugar = resultSet.getString("Lugar");
-                int numDepartamento = resultSet.getInt("Num_departamento");
-
-                Proxecto proxecto = new Proxecto(numProxecto, nomeProxecto, lugar, numDepartamento);
-                proxectos.add(proxecto);
-            }
-
-        } catch (SQLException e) {
-            System.err.println("Error ao consultar os proxectos: " + e.getMessage());
-        }
-
-        return proxectos;
-    }
 
 
 
