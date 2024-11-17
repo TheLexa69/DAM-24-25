@@ -1,8 +1,6 @@
 package org.example.Model;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class Conexion {
 
@@ -11,7 +9,7 @@ public class Conexion {
     private static final String PORT = "3306";
     private static final String URL = "jdbc:mysql://" + HOSTNAME + ":" + PORT + "/" + DATABASE;
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "root";//CON XAMPP NO NECESITO CONTRASEÑA EN EL INSTITUTO SI: root
+    private static final String PASSWORD = "";//CON XAMPP NO NECESITO CONTRASEÑA EN EL INSTITUTO SI: root
 
 
 

@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SQLEmpresa {
+public class SQLEmpresa2_5 {
 
     //EXERCICIO 2.1
     //a) Fai un método para subir o salario aos empregados dun determinado departamento.
@@ -22,6 +22,7 @@ public class SQLEmpresa {
             return true;
         } catch (SQLException e) {
             System.out.println("Error en incrementSalary() en SQLEmpresa.java" + e);
+            //throw new RuntimeException(e);
         }
         return false;
     }
@@ -317,7 +318,7 @@ public class SQLEmpresa {
         String sql = "{? = CALL fn_nEmpDepart(?)}"; // Llamada a la función
 
         try (CallableStatement callableStatement = con.prepareCall(sql)) {
-            callableStatement.registerOutParameter(1, java.sql.Types.INTEGER);
+            callableStatement.registerOutParameter(1, Types.INTEGER);
             callableStatement.setString(2, nombreDepartamento);
 
             callableStatement.execute();

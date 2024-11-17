@@ -160,3 +160,91 @@ SELECT e.Nome, concat(e.Apellido_1, " " ,e.Apellido_2) as Apellidos, e.Localidad
                                         JOIN Departamento d ON e.Num_departamento_pertenece = d.Num_departamento 
 										WHERE 
     e.Localidade = 'Vigo';
+    
+
+#2.3 (A)
+SELECT * FROM Departamento WHERE Nome_departamento = "PERSOAL";
+#UPDATE Proxecto SET Num_departamento = ? WHERE Nome_proxecto = ?;
+
+#2.3 (B)
+#insert into proxecto (num_proxecto, nome_proxecto, lugar, num_departamento) values (int, string, string, int)	
+select * from proxecto;
+
+#2.4
+select * from proxecto where Num_departamento in (select num_departamento from departamento);
+
+#==========================================
+#2.5(A)
+# Primeiro, na base de datos BDEmpresa, crea un procedemento almacenado chamado pr_cambioDomicilio para que modifique a dirección dun empregado cos datos que se lle pasan por parámetro. 
+# O procedemento recibirá como parámetros o nss do empre-gado, e os novos datos: rúa, número, piso, código postal e localidade.
+delimiter //
+DROP PROCEDURE IF EXISTS pr_cambio_domicilio //
+CREATE PROCEDURE pr_cambio_domicilio(
+	IN _NSSEMPREGADO VARCHAR(15),
+    IN _RUA VARCHAR(30),
+	IN _NUMERORUA int,
+    IN _PISO varchar(4),
+    IN _CP char(5),
+    IN _LOCALIDADE varchar(25)
+)
+BEGIN
+	UPDATE empregado SET Rua = _RUA, Numero_Rua = _NUMERORUA, Piso = _PISO, CP = _CP, Localidade = _LOCALIDADE WHERE NSS = _NSSEMPREGADO;
+END //
+delimiter ;
+
+
+#2.5(B)
+DELIMITER //
+DROP PROCEDURE IF EXISTS pr_DatosProxectos //
+CREATE PROCEDURE pr_DatosProxectos(
+    IN _NumeroProxecto INT,
+    OUT _Nome VARCHAR(100),
+    OUT _Lugar VARCHAR(100),
+    OUT _NumDepartamento INT
+)
+BEGIN
+    SELECT Nome_proxecto, Lugar, Num_Departamento INTO _Nome, _Lugar, _NumDepartamento FROM proxecto WHERE Num_proxecto = _NumeroProxecto;
+END //
+DELIMITER ;
+
+
+#2.5(C)
+DELIMITER //
+DROP PROCEDURE IF EXISTS pr_DepartControlaProxec //
+CREATE PROCEDURE pr_DepartControlaProxec(
+    IN _NumeroMinimoProxectos INT
+)
+BEGIN
+SELECT d.Num_departamento, d.Nome_departamento, COUNT(p.Num_proxecto) AS NumeroProxectos
+FROM departamento d
+         LEFT JOIN proxecto p ON d.Num_Departamento = p.Num_Departamento
+GROUP BY d.Num_departamento, d.Nome_departamento
+HAVING COUNT(p.Num_proxecto) >= _NumeroMinimoProxectos;
+END //
+DELIMITER ;
+
+
+#2.5(D)
+DELIMITER //
+DROP FUNCTION IF EXISTS fn_nEmpDepart //
+CREATE FUNCTION fn_nEmpDepart(
+    _NombreDepartamento VARCHAR(100)
+) RETURNS INT
+    DETERMINISTIC
+BEGIN
+    DECLARE _NumeroEmpleados INT;
+
+SELECT COUNT(*) INTO _NumeroEmpleados
+FROM empregado e
+         JOIN departamento d ON e.Num_departamento_pertenece  = d.Num_departamento
+WHERE d.Nome_departamento = _NombreDepartamento;
+
+RETURN _NumeroEmpleados;
+END;
+//
+DELIMITER ;
+
+#==========================================
+
+
+
