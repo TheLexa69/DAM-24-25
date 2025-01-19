@@ -1,0 +1,33 @@
+1. Comenta esta frase: Los hilos se ejecutan dentro del contexto del proceso al que pertenecen. Esto, ¿qué significa?, ?qué implicaciones tiene?
+R:
+
+2. Comenta esta frase: La programación de hilos proporciona multitarea o paralelismo real. ¿Por qué?
+R:
+
+3. Define Sección crítica. ¿Que se garantiza al definir una sección crítica en el código?
+R:
+
+4. Hilo Demonio: Explica cuándo y quién finaliza su ejecución. Explica los métodos de la clase Thread relacionados con el concepto de hilo demonio.
+R:
+
+5. Prioridad de ejecución de los hilos de un proceso. Cuál es la prioridad con la que nace un hilo. Explica atributos y métodos, de la clase Thread, relacionados con este concepto.
+R:
+
+6. Define Hilos cooperantes: ¿Cómo es ju ejecución, sincrónica o asincrónica, o ambas POR QUÉ?
+R:
+
+7. Define monitor reentrante. ¿Por qué es importante que un monitor sea reentrante?
+R:
+
+8. ¿Cuándo no es suficiente la sincronización de hilos mediante la definición de secciones críticas?
+R:
+
+9. Explica los métodos wait(), notify() y notifyAll(). ¿Cuándo los utilizamos, dónde siempre?
+R:
+
+
+Extra 1. ¿Qué es un hilo? ¿Qué recursos tiene un hilo? ¿Qué relación hay entre un hilo y un proceso?
+Extra 2. ¿Qué es un proceso? ¿Qué recursos tiene un proceso? ¿Qué relación hay entre un proceso y un hilo?
+Extra 3. Comenta esta frase: Los hilos comparten el espacio de direcciones del proceso al que pertenecen. Esto, ¿qué significa?, ?qué implicaciones tiene?
+Extra 4. Define Sección Crítica. ¿Por qué es importante?
+Extra 5. Explica los métodos wait(), notify() y notifyAll() de la clase Object. ¿Para qué se utilizan?
