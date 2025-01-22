@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 20px;
+            max-width: 70%;
+            margin: 0 auto;
+        }
+
+        .image-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .image-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .image-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .image-item button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .image-item button:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".image-item form button").forEach(button => {
+                button.addEventListener("click", (event) => {
+                    const confirmation = confirm("Estas seguro que quieres votar en esta serie/pelicula?");
+                    if (!confirmation) {
+                        event.preventDefault();
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<h1>Vota por tu Serie/Pelicula</h1>
+<div class="image-grid">
+    <div class="image-item" th:each="image, iterStat : ${images}">
+        <img th:src="@{${image.url}}" th:alt="'Image ' + ${iterStat.index}" />
+        <p>Votes: <span th:text="${image.votes}"></span></p>
+        <form th:action="@{/vote}" method="post">
+            <input type="hidden" th:name="index" th:value="${iterStat.index}" />
+            <button type="submit">Vote</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
