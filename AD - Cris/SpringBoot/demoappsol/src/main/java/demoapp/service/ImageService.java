@@ -1,28 +1,29 @@
 package demoapp.service;
 
 import demoapp.model.entity.Image;
+import demoapp.model.repository.ImageRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class ImageService {
 
-    private List<Image> images = new ArrayList<>();
+    @Autowired
+    private ImageRepository imageRepository;
 
     public ImageService() {
-        images.add(new Image("/images/ironman.jpg", 0));
-        images.add(new Image("/images/jocker.jpg", 0));
-        images.add(new Image("/images/spiderman.webp", 0));
     }
 
     public List<Image> getAllImages() {
-        return images;
+        return imageRepository.findAll();
     }
 
-    public void incrementLikes(int index) {
-        Image image = images.get(index);
+    public Image incrementLikes(int index) {
+        Image image = imageRepository.findById((long) index).orElseThrow(() -> new IllegalArgumentException("Invalid image Id:" + index));
         image.setVotes(image.getVotes() + 1);
+        return imageRepository.save(image);
     }
+
 }

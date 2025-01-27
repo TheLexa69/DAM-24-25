@@ -1,10 +1,11 @@
 package demoapp.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 public class Image {
     @Id
@@ -12,6 +13,10 @@ public class Image {
     private Long id;
     private String url;
     private int votes;
+
+    @OneToOne
+    @JoinColumn(name = "image_id")
+    private Image votedImage;
 
     public Image() {
     }
@@ -21,27 +26,13 @@ public class Image {
         this.votes = votes;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public int getVotes() {
-        return votes;
-    }
-
-    public void setVotes(int votes) {
-        this.votes = votes;
+    @Override
+    public String toString() {
+        return "Image{" +
+                "id=" + id +
+                ", url='" + url + '\'' +
+                ", votes=" + votes +
+                ", votedImage=" + votedImage +
+                '}';
     }
 }

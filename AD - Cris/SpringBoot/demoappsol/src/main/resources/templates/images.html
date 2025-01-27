@@ -68,6 +68,15 @@
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    const ipAddressField = document.getElementById('ipAddress');
+                    if (ipAddressField) {
+                        ipAddressField.value = data.ip;
+                    }
+                });
+
             document.querySelectorAll(".image-item form button").forEach(button => {
                 button.addEventListener("click", (event) => {
                     const confirmation = confirm("Estas seguro que quieres votar en esta serie/pelicula?");
@@ -80,13 +89,16 @@
     </script>
 </head>
 <body>
+<h1 th:text="'Bien-Venido ' + ${personName}"></h1>
 <h1>Vota por tu Serie/Pelicula favorita</h1>
 <div class="image-grid">
     <div class="image-item" th:each="image, iterStat : ${images}">
-        <img th:src="@{${image.url}}" th:alt="'Image ' + ${iterStat.index}" />
+        <img th:src="@{${image.url}}" th:alt="'Image ' + ${iterStat.index}"/>
         <p>Votes: <span th:text="${image.votes}"></span></p>
         <form th:action="@{/vote}" method="post">
-            <input type="hidden" th:name="index" th:value="${iterStat.index}" />
+            <input type="hidden" name="index" th:value="${iterStat.index}"/>
+            <input type="hidden" name="personName" th:value="${personName}"/>
+            <input type="hidden" id="ipAddress" name="ipAddress"/>
             <button type="submit">Vote</button>
         </form>
     </div>
