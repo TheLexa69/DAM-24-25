@@ -21,7 +21,11 @@ public class ImageService {
     }
 
     public Image incrementLikes(int index) {
-        Image image = imageRepository.findById((long) index).orElseThrow(() -> new IllegalArgumentException("Invalid image Id:" + index));
+        if (index <= 0) {
+            throw new IllegalArgumentException("Invalid image Id: " + index);
+        }
+        Image image = imageRepository.findById((long) index)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid image Id: " + index));
         image.setVotes(image.getVotes() + 1);
         return imageRepository.save(image);
     }

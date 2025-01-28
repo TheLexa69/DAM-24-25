@@ -34,12 +34,17 @@ public class ImageController {
     @PostMapping("/vote")
     public String vote(@RequestParam int index, @RequestParam String personName, @RequestParam String ipAddress) {
         try {
+            // Ajustar el índice para que comience en 0
+            index += 1;
+            if (index <= 0) {
+                throw new IllegalArgumentException("Invalid image Id: " + index);
+            }
             // Incrementar el voto de la imagen
             Image image = imageService.incrementLikes(index);
-
+            System.out.println("Voted image: " + image);
             // Verificar si ya existe un registro para esta persona
             Optional<PersonForm> existingPerson = personFormRepository.findByName(personName);
-
+            System.out.println("Existing person: " + existingPerson);
             if (existingPerson.isPresent()) {
                 // Si ya existe, actualizar su información si es necesario
                 PersonForm personForm = existingPerson.get();
