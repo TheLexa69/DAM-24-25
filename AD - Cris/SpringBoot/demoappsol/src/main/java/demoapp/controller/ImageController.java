@@ -24,21 +24,22 @@ public class ImageController {
     private PersonFormRepository personFormRepository;
 
     @GetMapping("/images")
-    public String showImages(@RequestParam(name = "name", required = false) String name, Model model) {
+    public String showImages(@RequestParam(name = "name", required = false) String name, @RequestParam(name = "email", required = false) String email, Model model) {
         List<Image> images = imageService.getAllImages();
         model.addAttribute("personName", name);
+        model.addAttribute("personEmail", email);
         model.addAttribute("images", images);
         return "images";
     }
 
     @PostMapping("/vote")
-    public String vote(@RequestParam int index, @RequestParam String personName, @RequestParam String ipAddress) {
+    public String vote(@RequestParam int index, @RequestParam String personName, @RequestParam String personEmail, @RequestParam String ipAddress) {
         try {
             // Incrementar el voto de la imagen
             Image image = imageService.incrementLikes(index);
 
             // Verificar si ya existe un registro para esta persona
-            Optional<PersonForm> existingPerson = personFormRepository.findByName(personName);
+            Optional<PersonForm> existingPerson = personFormRepository.findByEmail(personEmail);
 
             if (existingPerson.isPresent()) {
                 // Si ya existe, actualizar su información si es necesario
@@ -50,10 +51,10 @@ public class ImageController {
                 // Si no existe, crear un nuevo registro
                 PersonForm personForm = new PersonForm();
                 personForm.setName(personName);
+                personForm.setEmail(personEmail);
                 personForm.setVotado(true);
                 personForm.setVotedImage(image);
                 personForm.setAge(18); // Valor por defecto
-                personForm.setEmail("default@example.com"); // Valor por defecto
                 personFormRepository.save(personForm);
             }
 

@@ -21,6 +21,7 @@ public class ImageService {
     }
 
     public Image incrementLikes(int index) {
+        System.out.println("Incrementing votes for image with index: " + index);
         Image image = imageRepository.findById((long) index).orElseThrow(() -> new IllegalArgumentException("Invalid image Id:" + index));
         image.setVotes(image.getVotes() + 1);
         return imageRepository.save(image);

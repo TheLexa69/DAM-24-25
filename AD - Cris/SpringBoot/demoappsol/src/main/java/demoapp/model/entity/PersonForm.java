@@ -33,12 +33,40 @@ public class PersonForm {
 
     private boolean votado = false;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "image_id")
     private Image votedImage;
 
+    public PersonForm() {
+    }
+
+    public PersonForm(String name, Integer age, String email, String ipAddress, boolean votado, Image votedImage) {
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.ipAddress = ipAddress;
+        this.votado = votado;
+        this.votedImage = votedImage;
+    }
+
+    public PersonForm(String name, Integer age, String email, String ipAddress, boolean votado) {
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.ipAddress = ipAddress;
+        this.votado = votado;
+    }
+
     @Override
     public String toString() {
-        return "Person(Name: " + this.name + ", Age: " + this.age + ")";
+        return "PersonForm{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", email='" + email + '\'' +
+                ", ipAddress='" + ipAddress + '\'' +
+                ", votado=" + votado +
+                ", votedImage=" + votedImage +
+                '}';
     }
 }

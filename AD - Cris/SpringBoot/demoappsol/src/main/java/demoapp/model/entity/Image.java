@@ -14,9 +14,9 @@ public class Image {
     private String url;
     private int votes;
 
-    @OneToOne
-    @JoinColumn(name = "image_id")
-    private Image votedImage;
+//    @OneToOne
+//    @JoinColumn(name = "image_id")
+//    private Image votedImage;
 
     public Image() {
     }
@@ -32,7 +32,7 @@ public class Image {
                 "id=" + id +
                 ", url='" + url + '\'' +
                 ", votes=" + votes +
-                ", votedImage=" + votedImage +
+//                ", votedImage=" + votedImage +
                 '}';
     }
 }
