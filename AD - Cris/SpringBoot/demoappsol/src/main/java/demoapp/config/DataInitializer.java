@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 
@@ -44,9 +45,10 @@ public class DataInitializer {
                 List<Image> images = imageRepository.findAll();
                 if (images.size() >= 3) {
                     List<PersonForm> persons = Arrays.asList(
-                            new PersonForm("Sofia", 20, "sofia@gmail.com", "192.168.4.18", true, images.get(0)),
-                            new PersonForm("Carlos", 25, "carlos@gmail.com", "192.168.4.19", false),
-                            new PersonForm("Maria", 30, "maria@gmail.com", "192.168.4.20", true, images.get(2))
+                            new PersonForm("admin", 20, "admin@2302551550231.com", "192.168.4.18", true,  "admin", LocalDateTime.now()),
+                            new PersonForm("Sofia", 20, "sofia@gmail.com", "192.168.4.18", true,  "default", LocalDateTime.now(), images.get(0)),
+                            new PersonForm("Carlos", 25, "carlos@gmail.com", "192.168.4.19", false, "default", LocalDateTime.now()),
+                            new PersonForm("Maria", 30, "maria@gmail.com", "192.168.4.20", true, "default", LocalDateTime.now(), images.get(2))
                     );
                     personFormRepository.saveAll(persons);
                     System.out.println("Persons data initialized successfully.");

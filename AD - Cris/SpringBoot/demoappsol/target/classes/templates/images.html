@@ -89,6 +89,9 @@
     </script>
 </head>
 <body>
+<div style="display: flex; flex-direction: row-reverse;">
+    <a href="/">Cerrar Sesión</a>
+</div>
 <h1 th:text="'Bien-Venido ' + ${personName}"></h1>
 <h1>Vota por tu Serie/Pelicula favorita</h1>
 <div class="image-grid">
@@ -104,5 +107,7 @@
         </form>
     </div>
 </div>
+
+<div th:replace="fragments::javascript"/>
 </body>
 </html>

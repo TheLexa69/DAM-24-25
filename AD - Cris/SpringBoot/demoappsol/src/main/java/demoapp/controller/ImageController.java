@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,6 +33,7 @@ public class ImageController {
         return "images";
     }
 
+
     @PostMapping("/vote")
     public String vote(@RequestParam int index, @RequestParam String personName, @RequestParam String personEmail, @RequestParam String ipAddress) {
         try {
@@ -45,7 +47,9 @@ public class ImageController {
                 // Si ya existe, actualizar su información si es necesario
                 PersonForm personForm = existingPerson.get();
                 personForm.setVotado(true);
-                personForm.setVotedImage(image); // Actualizar la relación con la imagen
+                personForm.setVotedImage(image);
+                personForm.setVoteDateTime(LocalDateTime.now());
+                personForm.setRole("default");
                 personFormRepository.save(personForm);
             } else {
                 // Si no existe, crear un nuevo registro
@@ -55,6 +59,8 @@ public class ImageController {
                 personForm.setVotado(true);
                 personForm.setVotedImage(image);
                 personForm.setAge(18); // Valor por defecto
+                personForm.setVoteDateTime(LocalDateTime.now());
+                personForm.setRole("default");
                 personFormRepository.save(personForm);
             }
 
@@ -65,7 +71,6 @@ public class ImageController {
             return "redirect:/error";
         }
     }
-
 
     @GetMapping("/thankyou")
     public String thankYou() {

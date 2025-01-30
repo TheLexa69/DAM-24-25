@@ -1,6 +1,7 @@
 package demoapp.model.entity;
 
 import jakarta.persistence.*;
+import java.time.LocalDateTime;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
@@ -33,6 +34,10 @@ public class PersonForm {
 
     private boolean votado = false;
 
+    private String role;
+
+    private LocalDateTime voteDateTime;
+
     @ManyToOne
     @JoinColumn(name = "image_id")
     private Image votedImage;
@@ -49,12 +54,27 @@ public class PersonForm {
         this.votedImage = votedImage;
     }
 
-    public PersonForm(String name, Integer age, String email, String ipAddress, boolean votado) {
+    //SI NO VOTAN #NO LLEVA EL PARAMETRO IMAGES
+    public PersonForm(String name, Integer age, String email, String ipAddress, boolean votado, String role, LocalDateTime voteDateTime) {
         this.name = name;
         this.age = age;
         this.email = email;
         this.ipAddress = ipAddress;
         this.votado = votado;
+        this.role = role;
+        this.voteDateTime = voteDateTime;
+    }
+
+    //SI VOTAN
+    public PersonForm(String name, Integer age, String email, String ipAddress, boolean votado, String role, LocalDateTime voteDateTime, Image votedImage) {
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.ipAddress = ipAddress;
+        this.votado = votado;
+        this.role = role;
+        this.voteDateTime = voteDateTime;
+        this.votedImage = votedImage;
     }
 
     @Override
