@@ -89,6 +89,9 @@
     </script>
 </head>
 <body>
+<div style="display: flex; flex-direction: row-reverse;">
+    <a href="/">Cerrar Sesión</a>
+</div>
 <h1 th:text="'Bien-Venido ' + ${personName}"></h1>
 <h1>Vota por tu Serie/Pelicula favorita</h1>
 <div class="image-grid">
@@ -96,12 +99,15 @@
         <img th:src="@{${image.url}}" th:alt="'Image ' + ${iterStat.index}"/>
         <p>Votes: <span th:text="${image.votes}"></span></p>
         <form th:action="@{/vote}" method="post">
-            <input type="hidden" name="index" th:value="${iterStat.index}"/>
-            <input type="hidden" name="personName" th:value="${personName}"/>
+            <input type="hidden" name="index" th:value="${image.id}"/>
+            <input type="hidden" name="personName" th:value="${personName}"/>.
+            <input type="hidden" name="personEmail" th:value="${personEmail}" />
             <input type="hidden" id="ipAddress" name="ipAddress"/>
             <button type="submit">Vote</button>
         </form>
     </div>
 </div>
+
+<div th:replace="fragments::javascript"/>
 </body>
 </html>

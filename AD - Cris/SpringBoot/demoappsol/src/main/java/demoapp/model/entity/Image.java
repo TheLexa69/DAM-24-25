@@ -8,14 +8,15 @@ import lombok.Setter;
 @Setter
 @Entity
 public class Image {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String url;
-
     private int votes;
+
+//    @OneToOne
+//    @JoinColumn(name = "image_id")
+//    private Image votedImage;
 
     public Image() {
     }

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,41 +25,42 @@ public class ImageController {
     private PersonFormRepository personFormRepository;
 
     @GetMapping("/images")
-    public String showImages(@RequestParam(name = "name", required = false) String name, Model model) {
+    public String showImages(@RequestParam(name = "name", required = false) String name, @RequestParam(name = "email", required = false) String email, Model model) {
         List<Image> images = imageService.getAllImages();
         model.addAttribute("personName", name);
+        model.addAttribute("personEmail", email);
         model.addAttribute("images", images);
         return "images";
     }
 
+
     @PostMapping("/vote")
-    public String vote(@RequestParam int index, @RequestParam String personName, @RequestParam String ipAddress) {
+    public String vote(@RequestParam int index, @RequestParam String personName, @RequestParam String personEmail, @RequestParam String ipAddress) {
         try {
-            // Ajustar el índice para que comience en 0
-            index += 1;
-            if (index <= 0) {
-                throw new IllegalArgumentException("Invalid image Id: " + index);
-            }
             // Incrementar el voto de la imagen
             Image image = imageService.incrementLikes(index);
-            System.out.println("Voted image: " + image);
+
             // Verificar si ya existe un registro para esta persona
-            Optional<PersonForm> existingPerson = personFormRepository.findByName(personName);
-            System.out.println("Existing person: " + existingPerson);
+            Optional<PersonForm> existingPerson = personFormRepository.findByEmail(personEmail);
+
             if (existingPerson.isPresent()) {
                 // Si ya existe, actualizar su información si es necesario
                 PersonForm personForm = existingPerson.get();
                 personForm.setVotado(true);
-                personForm.setVotedImage(image); // Actualizar la relación con la imagen
+                personForm.setVotedImage(image);
+                personForm.setVoteDateTime(LocalDateTime.now());
+                personForm.setRole("default");
                 personFormRepository.save(personForm);
             } else {
                 // Si no existe, crear un nuevo registro
                 PersonForm personForm = new PersonForm();
                 personForm.setName(personName);
+                personForm.setEmail(personEmail);
                 personForm.setVotado(true);
                 personForm.setVotedImage(image);
                 personForm.setAge(18); // Valor por defecto
-                personForm.setEmail("default@example.com"); // Valor por defecto
+                personForm.setVoteDateTime(LocalDateTime.now());
+                personForm.setRole("default");
                 personFormRepository.save(personForm);
             }
 
@@ -69,7 +71,6 @@ public class ImageController {
             return "redirect:/error";
         }
     }
-
 
     @GetMapping("/thankyou")
     public String thankYou() {

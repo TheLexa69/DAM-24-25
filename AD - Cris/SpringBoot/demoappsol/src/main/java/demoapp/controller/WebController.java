@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import java.util.Optional;
+
 @Controller
 public class WebController implements WebMvcConfigurer {
     @Autowired
@@ -27,7 +29,9 @@ public class WebController implements WebMvcConfigurer {
     }
 
     @GetMapping("/")
-    public String showForm(PersonForm personForm) {
+    public String showForm(PersonForm personForm, Model model) {
+        model.addAttribute("persons", personFormRepository.findAll());
+        System.out.println("Persons: " + personFormRepository.findAll());
         return "form";
     }
 
@@ -36,8 +40,18 @@ public class WebController implements WebMvcConfigurer {
         if (bindingResult.hasErrors()) {
             return "form";
         }
-        personForm.setVotado(false); // Set votado to true
+
+        Optional<PersonForm> existingPerson = personFormRepository.findByEmail(personForm.getEmail());
+        if (existingPerson.isPresent()) {
+            if (!existingPerson.get().isVotado()) {
+                return "redirect:/images?name=" + existingPerson.get().getName() + "&email=" + existingPerson.get().getEmail();
+            }
+            model.addAttribute("emailExists", true);
+            return "form";
+        }
+
+        personForm.setVotado(false); // Set votado to false
         personFormRepository.save(personForm); // Save to the database
-        return "redirect:/images?name=" + personForm.getName();
+        return "redirect:/images?name=" + personForm.getName() + "&email=" + personForm.getEmail();
     }
 }
