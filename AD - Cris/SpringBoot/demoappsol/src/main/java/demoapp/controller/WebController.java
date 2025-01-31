@@ -51,6 +51,7 @@ public class WebController implements WebMvcConfigurer {
         }
 
         personForm.setVotado(false); // Set votado to false
+        personForm.setRole("default"); // Set role to default
         personFormRepository.save(personForm); // Save to the database
         return "redirect:/images?name=" + personForm.getName() + "&email=" + personForm.getEmail();
     }
