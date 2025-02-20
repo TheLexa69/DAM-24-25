@@ -36,9 +36,10 @@ public class ConversionController {
         ConversionResponse response = restTemplate.getForObject(url, ConversionResponse.class);
 
         if (response != null && response.getRates().containsKey(to)) {
-            double rate = response.getRates().get(to);
-            double result = amount * rate;
-            model.addAttribute("result", "Result: " + result + " " + to);
+//            System.out.println(response.getRates().get(to));
+//            double rate = response.getRates().get(to);
+//            double result = amount * rate;
+            model.addAttribute("result", "Result: " + response.getRates().get(to) + " " + to);
         } else {
             model.addAttribute("result", "Conversion rate not found for " + to);
         }
