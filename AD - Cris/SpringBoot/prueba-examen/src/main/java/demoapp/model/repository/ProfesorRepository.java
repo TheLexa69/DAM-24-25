@@ -1,4 +1,8 @@
 package demoapp.model.repository;
 
-public interface ProfesorRepository {
-}
+import demoapp.model.entity.Profesor;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ProfesorRepository extends JpaRepository<Profesor, Long> {}
